@@ -1,0 +1,22 @@
+{
+  "name": "football-analyst-tg",
+  "version": "1.0.0",
+  "description": "Аналитическое приложение для прогнозов матчей АПЛ в Telegram Web App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "telegram",
+    "web-app",
+    "football",
+    "analysis"
+  ],
+  "author": "YourName",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1"
+  },
+  "type": "commonjs"
+}
