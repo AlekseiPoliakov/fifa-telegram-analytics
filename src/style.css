@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 480px;
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Дисклеймер и шапка */
+.disclaimer {
+    padding: 2rem;
+}
+
+.league-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #1e3c72;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
+}
+
+/* Чекбокс и кнопка входа */
+.agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#agreeCheckbox {
+    width: 18px;
+    height: 18px;
+}
+
+label {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+#enterBtn {
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    cursor: not-allowed;
+    font-size: 1rem;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 200px;
+}
+
+#enterBtn:enabled {
+    cursor: pointer;
+    background-color: #2a5298;
+}
+
+#enterBtn:hover:enabled {
+    background-color: #1e3c72;
+}
+
+/* Меню лиг */
+#league-menu {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+#league-menu h2 {
+    margin-bottom: 1rem;
+    color: #1e3c72;
+}
+
+#league-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#league-menu li {
+    padding: 0.7rem 1rem;
+    background: #f0f0f0;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#league-menu li:hover {
+    background: #e0e0e0;
+    transform: scale(1.02);
+}
+
+/* Меню команд */
+#team-menu {
+    padding: 1.5rem;
+}
+
+#team-menu h2 {
+    margin-bottom: 1rem;
+    color: #1e3c72;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.team-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    background: #eef7ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Панель команды */
+#team-dashboard {
+    padding: 1.5rem;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+#team-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+#team-name {
+    margin: 0;
+    color: #1e3c72;
+}
+
+#back-btn {
+    margin-left: auto;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#back-btn:hover {
+    background: #0d2852;
+}
+
+/* Навигация панели */
+.dashboard-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.dashboard-nav a {
+    text-decoration: none;
+    color: #1e3c72;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    background: #eef7ff;
+    transition: all 0.3s ease;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+    background: #1e3c72;
+    color: white;
+}
+
+/* Контент панели */
+#dashboard-content {
+    min-height: 200px;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Список матчей */
+.matches-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.matches-list li {
+    background: #f0f0f0;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.matches-list li:hover {
+    background: #e0e0e0;
+}
+
+.match-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.match-stats {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .teams-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-nav {
+        flex-direction: column;
+    }
+}
+
+/* Полноэкранный режим в Telegram */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+/* Меню лиг */
+.league-list {
+    list-style: none;
+    padding: 0;
+}
+
+.league-item {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: #f0f0f0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.league-item.active {
+    background: #1e3c72;
+    color: white;
+}
+
+.league-item.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Grid для клубов */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.team-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Дашборд команды */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.dashboard-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    background: #e0e0e0;
+    border-radius: 6px;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-link.active {
+    background: #1e3c72;
+    color: white;
+}
+
+#dashboard-content {
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+#paginator button {
+    padding: 0.6rem 1.2rem;
+    margin: 0 0.3rem;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#paginator button:hover {
+    background: #0d284c;
+}
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.standings-table th,
+.standings-table td {
+    padding: 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.standings-table th {
+    background: #f0f0f0;
+    font-weight: 600;
+}
+
+.standings-table tr:hover {
+    background: #f9f9f9;
+}
+
+.standings-table img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+@media (max-width: 768px) {
+
+    .standings-table th:not(:first-child),
+    .standings-table td:not(:first-child) {
+        display: none;
+    }
+}
+#back-btn {
+    background: #1e3c72;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+#back-btn:hover {
+    background: #0d284c;
+}
+/* Ограничение ширины под Telegram */
+.app-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Убираем лишние отступы */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Адаптация таблиц и списков */
+table,
+.teams-grid {
+    width: 100%;
+}
+
+/* Мобильные стили */
+@media (max-width: 600px) {
+    .app-container {
+        padding: 0.5rem;
+    }
+
+    #back-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+.disclaimer-screen {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.disclaimer-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1e3c72;
+}
+
+.disclaimer-screen p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+.disclaimer-screen ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.disclaimer-screen li {
+    margin: 0.7rem 0;
+}
+#start-btn {
+    padding: 1rem 2.5rem;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#start-btn:hover {
+    background: #0d284c;
+}
+#league-menu {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#league-menu h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.league-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.league-card {
+    border: 2px solid #1e3c72;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.league-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.league-card.active {
+    background: #e6f0ff;
+}
+
+.league-card.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.league-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1e3c72;
+}
+
+.league-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.unavailable-mark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+/* Верхняя панель команды */
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: #1e3c72;
+    color: white;
+}
+
+.team-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.team-logo {
+    width: 60px;
+    height: 60px;
+}
+
+#team-crest {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#team-name {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Меню дашборда */
+.dashboard-menu {
+    padding: 0 2rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.dashboard-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.dashboard-menu li {
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.dashboard-menu li:hover {
+    color: #1e3c72;
+}
+
+.dashboard-menu li.active {
+    color: #1e3c72;
+    font-weight: 700;
+}
+
+.dashboard-menu li.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background: #1e3c72;
+    border-radius: 3px;
+}
+
+/* Область контента */
+.dashboard-content {
+    padding: 2rem;
+    min-height: 400px;
+}
