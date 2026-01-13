@@ -17,6 +17,69 @@ body {
     height: 100%;
 }
 
+/* Стили для окна дисклеймера */
+.disclaimer-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.disclaimer-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+/* Блок согласия */
+.agreement-block {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.checkbox-wrapper input {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #37003c;
+    /* Фирменный цвет АПЛ */
+}
+
+/* Состояния основной кнопки */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #00ff85;
+    /* Зеленый АПЛ */
+    color: #37003c;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:disabled {
+    background: #333;
+    color: #777;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 .container {
     width: 90%;
     max-width: 480px;

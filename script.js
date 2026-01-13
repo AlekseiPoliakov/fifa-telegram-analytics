@@ -549,5 +549,31 @@ app.setupDashboardNavigation();
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    App.init();
+    // 1. Инициализация Telegram Web App
+    const tg = window.Telegram.WebApp;
+    tg.expand(); // Расширяем на весь экран
+
+    // 2. Получаем элементы интерфейса
+    const acceptCheck = document.getElementById('accept-disclaimer');
+    const startBtn = document.getElementById('start-btn');
+    const disclaimerScreen = document.getElementById('disclaimer-screen');
+    const leagueMenu = document.getElementById('league-menu');
+
+    // 3. Логика активации кнопки через чекбокс
+    acceptCheck.addEventListener('change', () => {
+        startBtn.disabled = !acceptCheck.checked;
+    });
+
+    // 4. Переход к следующему окну (скелету приложения)
+    startBtn.addEventListener('click', () => {
+        // Скрываем окно дисклеймера
+        disclaimerScreen.classList.add('hidden');
+        // Показываем меню выбора лиг
+        leagueMenu.classList.remove('hidden');
+        
+        // Опционально: легкая вибрация при нажатии (доступно в Telegram)
+        if (tg.HapticFeedback) {
+            tg.HapticFeedback.impactOccurred('medium');
+        }
+    });
 });
