@@ -196,6 +196,65 @@ async function runAIAnalysis(home, away, date) {
     }
 }
 
+function getTeamLogoHtml(apiName) {
+    const lowerName = apiName.toLowerCase();
+    let fileName;
+
+    // Проверяем, есть ли команда в списке исключений
+    if (teamNameOverrides[lowerName]) {
+        fileName = teamNameOverrides[lowerName];
+    } else {
+        // Если нет, используем стандартную очистку
+        fileName = lowerName
+            .replace(/ fc| united| city| albion| wanderers| town| athletic/g, '')
+            .trim()
+            .replace(/\s+/g, '');
+    }
+
+    const svgPath = `images/club/${fileName}.svg`;
+    const pngPath = `images/club/${fileName}.png`;
+
+    return `
+        <img 
+            src="${svgPath}" 
+            alt="${apiName}" 
+            class="team-logo-img"
+            onerror="this.onerror=null; this.src='${pngPath}';"
+        >
+    `;
+}
+
+function createTeamLogoHtml(apiName) {
+    // 1. Очищаем имя (как мы обсуждали ранее)
+    const cleanName = apiName
+        .toLowerCase()
+        .replace(/ fc| united| city| albion| wanderers| town| athletic/g, '')
+        .trim()
+        .replace(/\s+/g, '');
+
+    const svgPath = `images/club/${cleanName}.svg`;
+    const pngPath = `images/club/${cleanName}.png`;
+
+    // 2. Возвращаем HTML с "предохранителем" onerror
+    return `
+        <img 
+            src="${svgPath}" 
+            alt="${apiName}" 
+            class="team-crest"
+            onerror="this.onerror=null; this.src='${pngPath}';"
+        >
+    `;
+}
+
+const teamNameOverrides = {
+    "manchester united fc": "manutd",
+    "manchester city fc": "mancity",
+    "tottenham hotspur fc": "spurs",
+    "west ham united fc": "westham",
+    "brighton & hove albion fc": "brighton",
+    "wolverhampton wanderers fc": "wolves"
+};
+
 // Стартовые привязки
 document.getElementById('start-btn').onclick = () => showScreen('leagues');
 document.querySelector('[data-league="PL1"]').onclick = () => loadTeams();
