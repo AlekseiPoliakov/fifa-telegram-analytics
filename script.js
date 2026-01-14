@@ -114,21 +114,21 @@ function loadOverview(team) {
     const content = document.getElementById('dashboard-content');
     content.innerHTML = `
         <div class="overview-card">
-            <h3>Добро пожаловать в кабинет ${team.shortName}</h3>
-            <p>Здесь вы можете просмотреть аналитику и расписание ближайших игр.</p>
-            <button class="ai-button" id="quick-ai-btn">🦾 Быстрый анализ команды</button>
+            <h3 style="margin-top:0">Кабинет: ${team.shortName}</h3>
+            <p>Вы выбрали <b>${team.name}</b>. Перейдите в раздел матчей, чтобы увидеть расписание и запустить ИИ-аналитику для конкретной игры.</p>
+            <button class="ai-button" id="quick-ai-btn">🦾 Общий анализ состава</button>
         </div>
     `;
     
     document.getElementById('quick-ai-btn').onclick = () => {
-        runAIAnalysis(team.name, "случайного сильного соперника", "на ближайший тур");
+        runAIAnalysis(team.name, "текущей формы в лиге", "ближайший тур");
     };
 }
 
 // 8. Контент вкладки "Матчи" (Календарь)
 async function loadMatchesTab(teamId) {
     const content = document.getElementById('dashboard-content');
-    content.innerHTML = '<div class="loader">Получаем расписание...</div>';
+    content.innerHTML = '<div class="loader">Получаем расписание матчей...</div>';
 
     try {
         const response = await fetch(`/api/teams/${teamId}/matches`, {
@@ -136,13 +136,13 @@ async function loadMatchesTab(teamId) {
         });
         const matches = await response.json();
 
-        content.innerHTML = '<h3 class="tab-title">Календарь игр</h3>';
-        
-        if (matches.length === 0) {
-            content.innerHTML += '<p>Предстоящих матчей не найдено</p>';
+        if (!matches || matches.length === 0) {
+            content.innerHTML = '<p class="loader">Предстоящих матчей не найдено.</p>';
             return;
         }
 
+        content.innerHTML = '<h3 class="tab-title">Предстоящие игры</h3>';
+        
         matches.forEach(match => {
             const date = new Date(match.utcDate).toLocaleDateString('ru-RU', {
                 day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'
@@ -168,7 +168,7 @@ async function loadMatchesTab(teamId) {
             content.appendChild(item);
         });
     } catch (e) {
-        content.innerHTML = '<p class="error">Ошибка загрузки календаря</p>';
+        content.innerHTML = '<p class="error">Ошибка загрузки календаря. Попробуйте позже.</p>';
     }
 }
 

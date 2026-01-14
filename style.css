@@ -259,3 +259,49 @@ body {
         transform: translateY(0);
     }
 }
+/* Эффект свечения и интерактивности для активной карточки */
+.league-card.active {
+    border-color: var(--card-purple);
+    background: linear-gradient(135deg, var(--card-purple), #6a1b9a);
+    box-shadow: 0 0 20px rgba(142, 36, 170, 0.4);
+    /* Мягкое фиолетовое свечение ✨ */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.league-card.active:hover {
+    transform: translateY(-2px);
+    /* Легкий подъем при наведении 🔼 */
+    box-shadow: 0 5px 25px rgba(142, 36, 170, 0.6);
+}
+
+/* Стили для недоступных лиг */
+.league-card.disabled {
+    opacity: 0.6;
+    filter: grayscale(1);
+    /* Делаем карточку черно-белой 🌑 */
+    pointer-events: none;
+    /* Отключаем возможность нажатия 🚫 */
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    /* Пунктирная граница для вида "в разработке" */
+}
+
+/* Настройка крестика (unavailable-badge) */
+.unavailable-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ff4444;
+    /* Красный крестик ❌ */
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    /* Эффект матового стекла под крестиком */
+}
