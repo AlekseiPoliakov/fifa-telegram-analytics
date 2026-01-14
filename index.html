@@ -2,58 +2,95 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Football Analyst APL</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Футбольный дашборд</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 
 <body>
-    <div id="app">
-        <section id="screen-leagues" class="screen">
-            <h2 class="screen-title">Выбери Лигу</h2>
-            <div class="list-container" id="leagues-list">
-                <div class="league-card" onclick="showScreen('screen-clubs')">
-                    <img src="images/england-flag.png" class="flag">
-                    <div class="league-info">
-                        <span class="league-name">Английский футбол</span>
-                        <span class="league-season">Сезон 2025/26</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <section id="screen-clubs" class="screen" style="display: none;">
-            <div class="header-nav">
-                <button onclick="showScreen('screen-leagues')" class="back-btn">back</button>
-                <h2 class="screen-title">Выбери Клуб</h2>
-            </div>
-            <div class="clubs-grid" id="clubs-grid"></div>
-        </section>
-    
-        <section id="screen-match-detail" class="screen" style="display: none;">
-            <div class="match-hero">
-                <button class="ai-button" onclick="requestAIAnalysis()">🤖 Аналитика ИИ</button>
-            </div>
-        </section>
-    </div>
 
-    <div id="app">
-        <header>
-            <h1 id="user-greeting">Загрузка...</h1>
-            <p class="subtitle">Аналитика матчей АПЛ</p>
+    <section id="disclaimer-screen" class="screen">
+        <header class="header">
+            <img src="images/Liga/Premier_League_Logo.svg" alt="Logo" class="logo">
+            <h1 class="app-title">Футбольный дашборд</h1>
+        </header>
+        <div class="content">
+            <p class="disclaimer-text">Статистика и аналитика английских лиг.</p>
+            <ul class="features-list">
+                <li>🏆 Таблицы и статистика</li>
+                <li>📅 Актуальные матчи</li>
+                <li>🤖 ИИ-аналитика</li>
+            </ul>
+        </div>
+        <footer class="footer">
+            <button id="start-btn" class="btn-primary">Начать</button>
+        </footer>
+    </section>
+
+    <section id="league-menu" class="screen hidden">
+        <header class="header-compact">
+            <h2 class="section-title">Выберите лигу</h2>
         </header>
 
-        <section id="match-list">
-            <div class="loader">Получаем данные о матчах...</div>
-        </section>
+        <div class="league-grid">
+            <article class="league-card active" data-league="PL1">
+                <div class="league-flag">
+                    <img src="images/Liga/Flag_of_England.svg.png" alt="Англия" class="flag-icon">
+                </div>
+                <div class="league-info-wrapper">
+                    <h3 class="league-name">Премьер-лига</h3>
+                    <p class="league-season">Сезон 2025/26</p>
+                    <p class="league-desc">20 клубов • 3 вылета</p>
+                </div>
+                <div class="league-logo-decor">
+                    <img src="images/Liga/Premier_League_Logo.svg" alt="PL" class="icon-decor">
+                </div>
+            </article>
 
-        <section id="ai-analysis" style="display: none;">
-            <h3>🤖 Прогноз ИИ</h3>
-            <div id="analysis-content"></div>
-        </section>
-    </div>
+            <article class="league-card disabled" data-league="EFL_CHAMPIONSHIP">
+                <div class="league-flag">
+                    <img src="images/Liga/Flag_of_England.svg.png" alt="Англия" class="flag-icon">
+                </div>
+                <div class="league-info-wrapper">
+                    <h3 class="league-name">Чемпионшип</h3>
+                    <p class="league-season">Сезон 2025/26</p>
+                </div>
+                <div class="league-logo-decor">
+                    <img src="images/Liga/Football_League_Championship.svg.png" alt="EFL" class="icon-decor">
+                </div>
+                <span class="unavailable-badge">×</span>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="team-menu" class="screen hidden">
+        <header class="header-compact">
+            <h2 id="selected-league" class="section-title">Команды</h2>
+        </header>
+        <div id="teams-grid" class="grid-container">
+        </div>
+    </section>
+
+    <section id="team-dashboard" class="screen hidden">
+        <header class="team-header">
+            <button id="back-btn" class="btn-icon">←</button>
+            <div class="team-meta">
+                <div id="team-logo-container"></div>
+                <h1 id="team-name" class="team-title">Название команды</h1>
+            </div>
+        </header>
+        <nav class="dashboard-nav">
+            <button data-view="overview" class="nav-item active">Обзор</button>
+            <button data-view="matches" class="nav-item">Матчи</button>
+            <button data-view="table" class="nav-item">Таблица</button>
+            <button data-view="stats" class="nav-item">Статистика</button>
+        </nav>
+        <main id="dashboard-content" class="dashboard-content">
+        </main>
+    </section>
 
     <script src="script.js"></script>
 </body>
