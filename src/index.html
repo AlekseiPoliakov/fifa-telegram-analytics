@@ -12,7 +12,7 @@
     <link rel="icon" href="assets/icons/premier-league.svg" type="image/svg+xml">
 
     <!-- Telegram WebApp SDK -->
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="telegram.org"></script>
 
     <!-- Прогрессивное улучшение -->
     <script>
@@ -23,13 +23,13 @@
 </head>
 
 <body>
-    <!-- Вступительный экран (Дисклеймер) -->
+    <!-- 1. Вступительный экран (Дисклеймер) -->
     <section id="disclaimer-screen" class="screen">
         <header class="header">
             <img src="assets/images/logo-premier-league.svg" alt="Premier League" class="logo">
             <h1 class="app-title">Аналитический дашборд</h1>
         </header>
-    
+
         <div class="content">
             <div class="disclaimer-container">
                 <p class="disclaimer-text">
@@ -38,10 +38,11 @@
                 </p>
                 <p class="disclaimer-text">
                     Прогнозы носят информационный характер. Всегда принимайте решения самостоятельно, не полагаясь
-                    исключительно на алгоритмы. Вы несете полную ответственность за использование данных и возможные риски.
+                    исключительно на алгоритмы. Вы несете полную ответственность за использование данных и возможные
+                    риски.
                 </p>
             </div>
-    
+
             <div class="agreement-block">
                 <label class="checkbox-wrapper">
                     <input type="checkbox" id="accept-disclaimer">
@@ -50,86 +51,41 @@
                 </label>
             </div>
         </div>
-    
+
         <footer class="footer">
             <button id="start-btn" class="btn-primary" disabled>Войти в приложение</button>
             <p class="warning-note">Версия 1.0.0 (Beta)</p>
         </footer>
     </section>
 
-        <!-- Меню выбора лиги -->
-        <section id="league-menu" class="screen">
-            <!-- HEADER: Заголовок "Выбери Лигу" как на скриншоте -->
-            <header class="header-main">
-                <h2 class="section-title">Выбери Лигу</h2>
-            </header>
-        
-            <!-- КАРТОЧКА ЛИГИ: Единый элемент дизайна -->
-            <div class="league-list-container">
-                <article class="league-card-item active" data-league="PL">
-                    <div class="league-icon">
-                        <img src="assets/icons/premier-league.svg" alt="Premier League" class="icon-lg">
-                    </div>
-                    <div class="league-details">
-                        <h3 class="league-name">Английский футбол</h3>
-                        <p class="league-info">Сезон 2025/26</p>
-                    </div>
-                    <div class="football-icon">
-                        <!-- Здесь можно разместить иконку мяча -->
-                    </div>
-                </article>
-        
-                <!-- Тут будут другие лиги, когда мы их добавим -->
-        
-            </div>
-        </section>
 
-
-    <!-- Меню выбора лиги -->
+    <!-- 2. Меню выбора лиги (Экран как на макете) -->
     <section id="league-menu" class="screen hidden">
-        <header class="header-compact">
-            <h2 class="section-title">Выберите лигу</h2>
+        <header class="header-main">
+            <h2 class="section-title">Выбери Лигу</h2>
         </header>
 
-        <div class="league-grid">
-            <article class="league-card active" data-league="PL1">
-                <h3 class="league-name">Премьер-лига</h3>
-                <p class="league-info">20 клубов • 3 вылета</p>
-                <div class="league-logo">
-                    <img src="assets/icons/premier-league.svg" alt="Premier League" class="icon-sm">
+        <div class="league-list-container">
+            <!-- Активная карточка АПЛ -->
+            <article class="league-card-item active" data-league="PL1">
+                <div class="league-icon">
+                    <img src="assets/icons/premier-league.svg" alt="Premier League" class="icon-lg">
                 </div>
-            </article>
-
-            <article class="league-card disabled" data-league="EFL_CHAMPIONSHIP">
-                <h3 class="league-name">Чемпионшип</h3>
-                <p class="league-info">24 клуба • 3/3 выход/вылет</p>
-                <div class="league-logo">
-                    <img src="assets/icons/efl-championship.svg" alt="EFL Championship" class="icon-sm">
+                <div class="league-details">
+                    <h3 class="league-name">Премьер-лига</h3>
+                    <p class="league-info">20 клубов • 3 вылета</p>
                 </div>
-                <span class="unavailable-badge" aria-label="Недоступно">×</span>
+                <div class="football-icon"></div>
             </article>
-
-            <article class="league-card disabled" data-league="EFL_LEAGUE_ONE">
-                <h3 class="league-name">Лига 1</h3>
-                <p class="league-info">24 клуба • 3/4 выход/вылет</p>
-                <div class="league-logo">
-                    <img src="assets/icons/efl-league-one.svg" alt="EFL League One" class="icon-sm">
-                </div>
-                <span class="unavailable-badge">×</span>
+            <!-- Другие лиги (оставлены для структуры, но неактивны) -->
+            <article class="league-card-item disabled" data-league="EFL_CHAMPIONSHIP">
+                <!-- ... контент ... -->
             </article>
-
-            <article class="league-card disabled" data-league="EFL_LEAGUE_TWO">
-                <h3 class="league-name">Лига 2</h3>
-                <p class="league-info">24 клуба • 4/2 выход/вылет</p>
-                <div class="league-logo">
-                    <img src="assets/icons/efl-league-two.svg" alt="EFL League Two" class="icon-sm">
-                </div>
-                <span class="unavailable-badge">×</span>
-            </article>
+            <!-- ... остальные лиги ... -->
         </div>
     </section>
 
-    <!-- Меню выбора команды -->
+    <!-- 3. Меню выбора команды (Как на вашем скриншоте) -->
     <section id="team-menu" class="screen hidden">
         <header class="header-compact">
             <h2 id="selected-league" class="section-title">Команды лиги</h2>
@@ -144,46 +100,26 @@
         </div>
     </section>
 
-    <!-- Дашборд команды -->
+    <!-- 4. Дашборд команды (скрыт) -->
     <section id="team-dashboard" class="screen hidden">
         <header class="team-header">
             <button id="back-btn" class="btn-icon" aria-label="Назад к выбору команд">
-                <svg class="icon">
-                    <use href="#arrow-back"></use>
-                </svg>
+                <!-- SVG иконка стрелки назад -->
             </button>
-
-            <div class="team-meta">
-                <div class="team-emblem">
-                    <img id="team-crest" src="" alt="Эмблема команды" class="team-crest">
-                </div>
-                <h1 id="team-name" class="team-title">Название команды</h1>
-            </div>
+            <!-- ... остальной контент ... -->
         </header>
-
-        <nav class="dashboard-nav" role="tablist" aria-label="Разделы данных">
-            <button data-view="overview" role="tab" aria-selected="true" class="nav-item active">Обзор</button>
-            <button data-view="matches" role="tab" aria-selected="false" class="nav-item">Матчи</button>
-            <button data-view="table" role="tab" aria-selected="false" class="nav-item">Таблица</button>
-            <button data-view="stats" role="tab" aria-selected="false" class="nav-item">Статистика</button>
-        </nav>
-
-        <main id="dashboard-content" class="dashboard-content" role="tabpanel" aria-live="polite">
-            <!-- Динамический контент -->
-        </main>
+        <!-- ... остальной контент ... -->
     </section>
 
     <!-- SVG символы для иконок -->
+    <!-- ... ваши символы SVG ... -->
     <svg style="position: absolute; width: 0; height: 0; overflow: hidden" aria-hidden="true">
         <symbol id="arrow-back" viewBox="0 0 24 24">
             <path d="M20 11H7.83l5.59-5.59L12 4 4 12l8 8 1.41-1.41" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" />
         </symbol>
-
-        <symbol id="premier-league" viewBox="0 0 100 100">
-            <!-- SVG контент для Premier League -->
-        </symbol>
     </svg>
+
 
     <script src="script.js" async></script>
 </body>

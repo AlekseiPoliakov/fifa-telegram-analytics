@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Элементы третьего экрана (Выбор команды)
     const teamMenu = document.getElementById('team-menu');
+    
+    // 4. Элементы четвертого экрана (Дашборд)
     const backBtn = document.getElementById('back-btn');
 
     // --- Логика переходов ---
@@ -26,19 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.addEventListener('click', () => {
         disclaimerScreen.classList.add('hidden');
         leagueMenu.classList.remove('hidden');
-        // В этом месте можно вызвать функцию fetchLeaguesData() для обновления инфо в карточках
     });
 
     // C. Переход с Выбора лиги на Выбор команды АПЛ
     plCard.addEventListener('click', () => {
         leagueMenu.classList.add('hidden');
         teamMenu.classList.remove('hidden');
-        // Здесь мы будем загружать список команд для выбранной лиги
     });
 
     // D. Кнопка "Назад" с экрана команды на экран лиги
-    backBtn.addEventListener('click', () => {
-        teamMenu.classList.add('hidden');
-        leagueMenu.classList.remove('hidden');
-    });
+    // !!! Этот обработчик нужно будет убрать, когда мы добавим кнопку "Назад" на самом экране команды
+    if (backBtn) {
+         backBtn.addEventListener('click', () => {
+            teamMenu.classList.add('hidden');
+            leagueMenu.classList.remove('hidden');
+        });
+    }
+
 });
