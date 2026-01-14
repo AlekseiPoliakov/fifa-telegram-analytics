@@ -1,0 +1,307 @@
+/* 1. Глобальные настройки и переменные */
+:root {
+    --brand-purple: #4a004e;
+    --card-purple: #8e24aa;
+    --text-white: #ffffff;
+    --tg-bg: var(--tg-theme-bg-color, #121212);
+    --accent-gradient: linear-gradient(90deg, #ff00cc, #3333ff);
+}
+
+body {
+    background-color: var(--brand-purple);
+    color: var(--text-white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* 2. Утилиты */
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    padding: 16px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 3. Стили для Disclaimer и Лиг */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.disclaimer-text {
+    color: #ccc;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.features-list li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.league-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.league-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.league-card.active {
+    border-color: var(--card-purple);
+    background: var(--card-purple);
+}
+
+.league-card.disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+/* 4. Сетка команд */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+.team-card-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.team-logo-circle {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.team-logo-circle img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+.team-label {
+    font-size: 11px;
+    margin-top: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* 5. Дашборд и Табы */
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.team-crest {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.dashboard-nav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    color: #ccc;
+    padding: 12px 5px;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-item.active {
+    color: white;
+    border-bottom-color: var(--card-purple);
+    font-weight: bold;
+}
+
+/* 6. Календарь матчей (НОВОЕ) */
+.match-calendar-item {
+    background: rgba(255, 255, 255, 0.07);
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.match-date {
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.match-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.vs {
+    color: var(--card-purple);
+    font-size: 12px;
+}
+
+/* 7. Кнопки */
+.btn-primary {
+    background: var(--card-purple);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ai-button {
+    background: var(--accent-gradient);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(255, 0, 204, 0.3);
+}
+
+.mini-ai-btn {
+    background: var(--accent-gradient);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* 8. Анимации и прочее */
+.loader {
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+    font-style: italic;
+}
+
+.tab-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Эффект свечения и интерактивности для активной карточки */
+.league-card.active {
+    border-color: var(--card-purple);
+    background: linear-gradient(135deg, var(--card-purple), #6a1b9a);
+    box-shadow: 0 0 20px rgba(142, 36, 170, 0.4);
+    /* Мягкое фиолетовое свечение ✨ */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.league-card.active:hover {
+    transform: translateY(-2px);
+    /* Легкий подъем при наведении 🔼 */
+    box-shadow: 0 5px 25px rgba(142, 36, 170, 0.6);
+}
+
+/* Стили для недоступных лиг */
+.league-card.disabled {
+    opacity: 0.6;
+    filter: grayscale(1);
+    /* Делаем карточку черно-белой 🌑 */
+    pointer-events: none;
+    /* Отключаем возможность нажатия 🚫 */
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    /* Пунктирная граница для вида "в разработке" */
+}
+
+/* Настройка крестика (unavailable-badge) */
+.unavailable-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ff4444;
+    /* Красный крестик ❌ */
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    /* Эффект матового стекла под крестиком */
+}
