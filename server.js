@@ -5,12 +5,21 @@ const axios = require('axios');
 const TelegramBot = require('node-telegram-bot-api');
 const { OpenAI } = require('openai');
 const Database = require('better-sqlite3');
+const crypto = require('crypto');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Инициализация БД
+app.use(cors());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
 const db = new Database('football_memory.db');
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
+
+// Инициализация БД
 db.exec(`
   CREATE TABLE IF NOT EXISTS matches (
     id INTEGER PRIMARY KEY,
@@ -20,71 +29,117 @@ db.exec(`
     score TEXT,
     date TEXT
   );
-  CREATE TABLE IF NOT EXISTS predictions (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    team_name TEXT,
-    prediction TEXT,
-    actual_result TEXT,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
 `);
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
+// --- MIDDLEWARE: ПРОВЕРКА БЕЗОПАСНОСТИ ---
+const verifyTelegramWebAppData = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+    if (!authHeader) return res.status(401).json({ error: "Unauthorized" });
 
-// --- КЭШИРОВАНИЕ ---
-let cachedLeagueData = null;
-let lastFetchTime = 0;
-const CACHE_DURATION = 15 * 60 * 1000; // 15 минут
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
-
-// Вспомогательная функция сохранения в БД
-const saveMatchToMemory = (match) => {
-    const insert = db.prepare(`INSERT OR REPLACE INTO matches (id, competition, home_team, away_team, score, date) VALUES (?, ?, ?, ?, ?, ?)`);
-    const scoreText = match.score?.fullTime?.home !== null ? `${match.score.fullTime.home}:${match.score.fullTime.away}` : 'scheduled';
-    insert.run(match.id, match.competition.name, match.homeTeam.name, match.awayTeam.name, scoreText, match.utcDate);
-};
-
-// 1. Оптимизированный эндпоинт для лиги (с кэшем)
-app.get('/api/leagues/premier-league', async (req, res) => {
-    const now = Date.now();
-    if (cachedLeagueData && (now - lastFetchTime < CACHE_DURATION)) {
-        return res.json(cachedLeagueData);
-    }
+    const [authType, rawInitData] = authHeader.split(' ');
+    if (authType !== 'twa') return res.status(401).json({ error: "Invalid auth type" });
 
     try {
-        const response = await axios.get('api.football-data.org', {
+        const urlParams = new URLSearchParams(rawInitData);
+        const hash = urlParams.get('hash');
+        urlParams.delete('hash');
+        
+        const dataCheckString = Array.from(urlParams.entries())
+            .map(([key, value]) => `${key}=${value}`)
+            .sort()
+            .join('\n');
+
+        const secretKey = crypto.createHmac('sha256', 'WebAppData')
+            .update(process.env.TELEGRAM_BOT_TOKEN)
+            .digest();
+        
+        const hmac = crypto.createHmac('sha256', secretKey)
+            .update(dataCheckString)
+            .digest('hex');
+
+        if (hmac === hash) {
+            next();
+        } else {
+            res.status(403).json({ error: "Data integrity error" });
+        }
+    } catch (e) {
+        res.status(500).json({ error: "Internal security check error" });
+    }
+};
+
+// --- API ЭНДПОИНТЫ ---
+
+// 1. Получить список всех команд АПЛ
+app.get('/api/teams', verifyTelegramWebAppData, async (req, res) => {
+    try {
+        const response = await axios.get('https://api.football-data.org/v4/competitions/PL/teams', {
             headers: { 'X-Auth-Token': process.env.FOOTBALL_DATA_API_KEY }
         });
-
-        cachedLeagueData = {
-            matchCount: response.data.matches.length,
-            matches: response.data.matches.slice(0, 10)
-        };
-        lastFetchTime = now;
-
-        // Фоновое сохранение в БД для обучения ИИ
-        response.data.matches.forEach(saveMatchToMemory);
-
-        res.json(cachedLeagueData);
+        const teams = response.data.teams.map(team => ({
+            id: team.id,
+            name: team.name,
+            shortName: team.shortName,
+            tla: team.tla,
+            crest: team.crest
+        }));
+        res.json(teams);
     } catch (error) {
-        console.error('API Error:', error.message);
-        if (cachedLeagueData) return res.json(cachedLeagueData);
-        res.status(500).json({ error: 'Ошибка получения данных' });
+        console.error('Teams Error:', error.message);
+        res.status(500).json({ error: 'Failed to fetch teams' });
     }
 });
 
-// 2. Бот
+// 2. Получить календарь матчей конкретной команды
+app.get('/api/teams/:id/matches', verifyTelegramWebAppData, async (req, res) => {
+    const teamId = req.params.id;
+    try {
+        const response = await axios.get(`https://api.football-data.org/v4/teams/${teamId}/matches?status=SCHEDULED`, {
+            headers: { 'X-Auth-Token': process.env.FOOTBALL_DATA_API_KEY }
+        });
+        // Возвращаем ближайшие 5 матчей
+        res.json(response.data.matches.slice(0, 5));
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch matches' });
+    }
+});
+
+// 3. Анализ ИИ (OpenAI)
+app.post('/api/analyze', verifyTelegramWebAppData, async (req, res) => {
+    const { homeTeam, awayTeam, date } = req.body;
+    console.log(`🤖 Анализ запрошен: ${homeTeam} vs ${awayTeam}`);
+
+    try {
+        const completion = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [
+                { role: "system", content: "Ты — профессиональный футбольный аналитик АПЛ. Твои ответы коротки (до 300 знаков), аргументированы и содержат предполагаемый счет." },
+                { role: "user", content: `Дай прогноз: ${homeTeam} против ${awayTeam}, матч состоится ${date}. Вероятный исход?` }
+            ],
+            max_tokens: 150
+        });
+
+        res.json({ analysis: completion.choices[0].message.content });
+    } catch (error) {
+        console.error('OpenAI Error:', error.message);
+        res.status(500).json({ analysis: "Извините, футбольный оракул временно недоступен. Попробуйте позже!" });
+    }
+});
+
+// Запуск бота
 bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, `Привет, ${msg.from.first_name}! ⚽ Аналитика АПЛ готова.`, {
-        reply_markup: { inline_keyboard: [[{ text: "📊 Открыть приложение", web_app: { url: process.env.WEBAPP_URL } }]] }
+    bot.sendMessage(msg.chat.id, `Привет, ${msg.from.first_name}! ⚽\nНажми на кнопку ниже, чтобы войти в дашборд аналитики.`, {
+        reply_markup: {
+            inline_keyboard: [[
+                { text: "📊 Аналитика АПЛ", web_app: { url: process.env.WEBAPP_URL } }
+            ]]
+        }
     });
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.listen(PORT, () => {
+    console.log(`
+    ✅ Сервер запущен на порту ${PORT}
+    🏠 Локально: http://localhost:${PORT}
+    🤖 Бот активен
+    `);
 });
-
-app.listen(PORT, () => console.log(`🚀 Сервер: http://localhost:${PORT}`));
