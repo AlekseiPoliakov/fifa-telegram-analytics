@@ -1,57 +1,16 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const axios = require('axios'); // Установите: npm install axios
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
-
-// 1. ПРОКСИ-ЭНДПОИНТ (Скрывает ваш ключ)
-app.get('/api/matches/:teamId', async (req, res) => {
-    try {
-        const response = await axios.get(`${process.env.FOOTBALL_DATA_BASE_URL}/teams/${req.params.teamId}/matches`, {
-            headers: { 'X-Auth-Token': process.env.FOOTBALL_DATA_API_KEY }
-        });
-        res.json(response.data);
-    } catch (error) {
-        res.status(500).json({ error: 'Ошибка при получении данных от API' });
-    }
-});
-
-// 2. ЭНДПОИНТ ДЛЯ АНАЛИТИКИ (Тут будут "мозги" ИИ)
-app.post('/api/analyze', async (req, res) => {
-    const { teamData } = req.body;
-    
-    // Здесь мы в будущем будем делать запрос к вашему Python-скрипту с ИИ
-    // Пока возвращаем заглушку
-    res.json({
-        analysis: "Команда в отличной форме. Ожидаемая победа 70%.",
-        reasoning: "Основано на последних 5 победах и отсутствии травм у ключевых игроков."
-    });
-});
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-app.listen(PORT, () => {
-    console.log(`✅ Сервер запущен: http://localhost:${PORT}`);
-});
-require('dotenv').config();
-const express = require('express');
 const axios = require('axios');
 const TelegramBot = require('node-telegram-bot-api');
 const { OpenAI } = require('openai');
 const Database = require('better-sqlite3');
-const path = require('path');
 
-// 1. Инициализация БД (Файл создастся в корне проекта)
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Инициализация БД
 const db = new Database('football_memory.db');
-
-// Создание таблиц для "памяти" и "обучения"
 db.exec(`
   CREATE TABLE IF NOT EXISTS matches (
     id INTEGER PRIMARY KEY,
@@ -70,67 +29,62 @@ db.exec(`
   );
 `);
 
-const app = express();
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
 
-// Функция сохранения матча в БД
+// --- КЭШИРОВАНИЕ ---
+let cachedLeagueData = null;
+let lastFetchTime = 0;
+const CACHE_DURATION = 15 * 60 * 1000; // 15 минут
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+
+// Вспомогательная функция сохранения в БД
 const saveMatchToMemory = (match) => {
     const insert = db.prepare(`INSERT OR REPLACE INTO matches (id, competition, home_team, away_team, score, date) VALUES (?, ?, ?, ?, ?, ?)`);
     const scoreText = match.score?.fullTime?.home !== null ? `${match.score.fullTime.home}:${match.score.fullTime.away}` : 'scheduled';
     insert.run(match.id, match.competition.name, match.homeTeam.name, match.awayTeam.name, scoreText, match.utcDate);
 };
 
-// Бот
+// 1. Оптимизированный эндпоинт для лиги (с кэшем)
+app.get('/api/leagues/premier-league', async (req, res) => {
+    const now = Date.now();
+    if (cachedLeagueData && (now - lastFetchTime < CACHE_DURATION)) {
+        return res.json(cachedLeagueData);
+    }
+
+    try {
+        const response = await axios.get('api.football-data.org', {
+            headers: { 'X-Auth-Token': process.env.FOOTBALL_DATA_API_KEY }
+        });
+
+        cachedLeagueData = {
+            matchCount: response.data.matches.length,
+            matches: response.data.matches.slice(0, 10)
+        };
+        lastFetchTime = now;
+
+        // Фоновое сохранение в БД для обучения ИИ
+        response.data.matches.forEach(saveMatchToMemory);
+
+        res.json(cachedLeagueData);
+    } catch (error) {
+        console.error('API Error:', error.message);
+        if (cachedLeagueData) return res.json(cachedLeagueData);
+        res.status(500).json({ error: 'Ошибка получения данных' });
+    }
+});
+
+// 2. Бот
 bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, `Привет, ${msg.from_user.first_name}! ⚽ Аналитика готова.`, {
+    bot.sendMessage(msg.chat.id, `Привет, ${msg.from.first_name}! ⚽ Аналитика АПЛ готова.`, {
         reply_markup: { inline_keyboard: [[{ text: "📊 Открыть приложение", web_app: { url: process.env.WEBAPP_URL } }]] }
     });
 });
 
-// Прокси для футбольных данных + Авто-сохранение в БД для обучения
-app.get('/api/football/*', async (req, res) => {
-    try {
-        const endpoint = req.params[0];
-        const response = await axios.get(`api.football-data.org{endpoint}`, {
-            headers: { 'X-Auth-Token': process.env.FOOTBALL_DATA_API_KEY },
-            params: req.query
-        });
-        
-        // Если это список матчей, сохраняем их в базу для будущего анализа ИИ
-        if (response.data.matches) {
-            response.data.matches.forEach(saveMatchToMemory);
-        }
-        
-        res.json(response.data);
-    } catch (error) {
-        res.status(500).json({ error: 'Ошибка API' });
-    }
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Умная ИИ-аналитика на основе данных из БД
-app.get('/api/ai-analyze', async (req, res) => {
-    const { teamName } = req.query;
-    try {
-        // Достаем историю из нашей базы
-        const history = db.prepare(`SELECT * FROM matches WHERE home_team = ? OR away_team = ? ORDER BY date DESC LIMIT 5`).all(teamName, teamName);
-        const historyContext = history.map(m => `${m.date}: ${m.home_team} ${m.score} ${m.away_team}`).join('\n');
-
-        const completion = await openai.chat.completions.create({
-            model: "gpt-4o",
-            messages: [
-                { role: "system", content: "Ты футбольный аналитик. Твои прогнозы основаны на истории матчей из базы данных пользователя." },
-                { role: "user", content: `Проанализируй ${teamName}. История игр:\n${historyContext}\nДай прогноз и объясни причины.` }
-            ]
-        });
-
-        const analysis = completion.choices.message.content;
-        db.prepare('INSERT INTO predictions (team_name, prediction) VALUES (?, ?)').run(teamName, analysis);
-        res.json({ analysis });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-app.use(express.static(path.join(__dirname, 'public')));
-app.listen(process.env.PORT || 3000, () => console.log(`🚀 Сервер запущен на порту ${process.env.PORT || 3000}`));
+app.listen(PORT, () => console.log(`🚀 Сервер: http://localhost:${PORT}`));
