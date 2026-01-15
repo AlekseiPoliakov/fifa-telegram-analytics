@@ -305,3 +305,199 @@ body {
     backdrop-filter: blur(4px);
     /* Эффект матового стекла под крестиком */
 }
+.match-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.match-team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.mini-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.vs {
+    font-weight: bold;
+    color: var(--tg-theme-hint-color);
+    font-size: 0.8rem;
+}
+:root {
+    --primary: #0088cc;
+    --bg: var(--tg-theme-bg-color, #ffffff);
+    --text: var(--tg-theme-text-color, #222);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Чтобы не было лишней прокрутки */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    flex: 1;
+    /* Занимает всё пространство */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    /* Резиновое распределение */
+}
+
+/* Карточки (Страна, Лига) */
+.item-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: var(--tg-theme-secondary-bg-color, #f4f4f4);
+    transition: 0.2s;
+}
+
+.item-card.active:active {
+    transform: scale(0.98);
+}
+
+.item-card.disabled {
+    opacity: 0.5;
+}
+
+.flag-icon,
+.league-icon {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.item-info .name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.item-info .sub {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Сетка клубов 4. */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    overflow-y: auto;
+    /* Сетка может скроллиться внутри */
+}
+
+/* Кнопка "Войти" */
+.btn-main {
+    width: 100%;
+    padding: 18px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+/* Контейнер матча */
+.match-card {
+    background: var(--tg-theme-secondary-bg-color);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Дата и статус (верхняя строка) */
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Команды (центр) */
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.team-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 40%;
+}
+
+.tiny-logo {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.team-mini span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.match-score {
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--tg-theme-hint-color);
+}
+
+/* Кнопка ИИ внутри карточки */
+.btn-ai-mini {
+    background: rgba(0, 136, 204, 0.1);
+    color: var(--tg-theme-button-color);
+    border: 1px solid var(--tg-theme-button-color);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,70 +1,84 @@
+/**
+ * 1. ИНИЦИАЛИЗАЦИЯ И НАСТРОЙКИ
+ */
 const tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 
-// Хранилище для данных текущей выбранной команды
-let currentTeam = null;
-
-// 1. Инициализация экранов
-const screens = {
-    disclaimer: document.getElementById('disclaimer-screen'),
-    leagues: document.getElementById('league-menu'),
-    teams: document.getElementById('team-menu'),
-    dashboard: document.getElementById('team-dashboard')
+// Названия файлов для команд, которые не совпадают с API
+const teamNameOverrides = {
+    "manchester united fc": "manutd",
+    "manchester city fc": "mancity",
+    "tottenham hotspur fc": "spurs",
+    "west ham united fc": "westham",
+    "brighton & hove albion fc": "brighton",
+    "wolverhampton wanderers fc": "wolves",
+    "crystal palace fc": "palace",
+    "nottingham forest fc": "forest"
 };
 
-// 2. Универсальная функция навигации
-function showScreen(screenKey) {
-    Object.values(screens).forEach(s => {
-        if (s) s.classList.add('hidden');
-    });
+/**
+ * 2. УНИВЕРСАЛЬНАЯ НАВИГАЦИЯ (РЕЗИНОВАЯ ЛОГИКА)
+ */
+function showScreen(screenId) {
+    // Скрываем все экраны
+    document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
     
-    if (screens[screenKey]) {
-        screens[screenKey].classList.remove('hidden');
+    // Показываем нужный
+    const target = document.getElementById(screenId);
+    if (target) {
+        target.classList.remove('hidden');
     }
 
-    if (screenKey === 'disclaimer' || screenKey === 'leagues') {
+    // Управление кнопкой Back в Telegram
+    if (screenId === 'screen-welcome') {
         tg.BackButton.hide();
     } else {
         tg.BackButton.show();
     }
 }
 
-// 3. Обработка системной кнопки "Назад"
+// Логика кнопки "Назад"
 tg.onEvent('backButtonClicked', () => {
-    if (!screens.dashboard.classList.contains('hidden')) {
-        showScreen('teams');
-    } else if (!screens.teams.classList.contains('hidden')) {
-        showScreen('leagues');
-    } else if (!screens.leagues.classList.contains('hidden')) {
-        showScreen('disclaimer');
+    if (!document.getElementById('screen-club-cabinet').classList.contains('hidden')) {
+        showScreen('screen-teams');
+    } else if (!document.getElementById('screen-teams').classList.contains('hidden')) {
+        showScreen('screen-leagues');
+    } else if (!document.getElementById('screen-leagues').classList.contains('hidden')) {
+        showScreen('screen-countries');
+    } else if (!document.getElementById('screen-countries').classList.contains('hidden')) {
+        showScreen('screen-welcome');
     }
 });
 
-// 4. Логика переключения Табов внутри Дашборда
-document.querySelectorAll('.nav-item').forEach(button => {
-    button.onclick = function() {
-        if (!currentTeam) return;
+/**
+ * 3. ЛОГИКА ЛОГОТИПОВ
+ */
+function getTeamLogoHtml(apiName, className = "team-logo-img") {
+    const lowerName = apiName.toLowerCase();
+    let fileName = teamNameOverrides[lowerName] || lowerName
+        .replace(/ fc| united| city| albion| wanderers| town| athletic/g, '')
+        .trim()
+        .replace(/\s+/g, '');
 
-        // Визуальное переключение активной вкладки
-        document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
+    const svgPath = `images/club/${fileName}.svg`;
+    const pngPath = `images/club/${fileName}.png`;
 
-        const view = this.getAttribute('data-view');
-        if (view === 'matches') {
-            loadMatchesTab(currentTeam.id);
-        } else if (view === 'overview') {
-            loadOverview(currentTeam);
-        } else {
-            document.getElementById('dashboard-content').innerHTML = 
-                `<p class="loader">Раздел ${view} в разработке...</p>`;
-        }
-    };
-});
+    return `
+        <img 
+            src="${svgPath}" 
+            alt="${apiName}" 
+            class="${className}"
+            onerror="this.onerror=null; this.src='${pngPath}'; this.alt='⚽';"
+        >
+    `;
+}
 
-// 5. Загрузка команд
-async function loadTeams() {
-    showScreen('teams');
+/**
+ * 4. ЗАГРУЗКА КЛУБОВ (ШАГ 4)
+ */
+async function loadTeams(leagueId) {
+    showScreen('screen-teams');
     const grid = document.getElementById('teams-grid');
     grid.innerHTML = '<div class="loader">Загрузка клубов...</div>';
 
@@ -80,184 +94,153 @@ async function loadTeams() {
             card.className = 'team-card-ui';
             card.innerHTML = `
                 <div class="team-logo-circle">
-                    <img src="${team.crest}" alt="${team.name}" onerror="this.src='assets/icons/premier-league.svg'">
+                    ${getTeamLogoHtml(team.name)}
                 </div>
-                <span class="team-label">${team.tla}</span>
+                <span class="team-label">${team.tla || team.shortName}</span>
             `;
+            
             card.onclick = () => {
                 tg.HapticFeedback.selectionChanged();
-                openDashboard(team);
+                openClubCabinet(team);
             };
             grid.appendChild(card);
         });
     } catch (e) {
-        grid.innerHTML = '<p class="error">Ошибка загрузки команд</p>';
+        grid.innerHTML = '<p class="error">Ошибка загрузки команд. Проверьте соединение.</p>';
     }
 }
 
-// 6. Открытие Дашборда
-function openDashboard(team) {
-    currentTeam = team;
-    showScreen('dashboard');
-    document.getElementById('team-name').innerText = team.name;
-    document.getElementById('team-crest').src = team.crest;
+/**
+ * 5. ЛИЧНЫЙ КАБИНЕТ КЛУБА (ШАГ 5)
+ */
+function openClubCabinet(team) {
+    showScreen('screen-club-cabinet');
     
-    // Сброс вкладок на "Обзор"
-    document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
-    document.querySelector('[data-view="overview"]').classList.add('active');
-    
-    loadOverview(team);
-}
+    document.getElementById('cabinet-team-name').innerText = team.name;
+    const logoPlace = document.getElementById('cabinet-logo-place');
+    if (logoPlace) {
+        logoPlace.innerHTML = getTeamLogoHtml(team.name, "cabinet-main-logo");
+    }
 
-// 7. Контент вкладки "Обзор"
-function loadOverview(team) {
-    const content = document.getElementById('dashboard-content');
-    content.innerHTML = `
-        <div class="overview-card">
-            <h3 style="margin-top:0">Кабинет: ${team.shortName}</h3>
-            <p>Вы выбрали <b>${team.name}</b>. Перейдите в раздел матчей, чтобы увидеть расписание и запустить ИИ-аналитику для конкретной игры.</p>
-            <button class="ai-button" id="quick-ai-btn">🦾 Общий анализ состава</button>
+    // Пример наполнения контента
+    document.getElementById('cabinet-content').innerHTML = `
+        <div class="info-card">
+            <h3>Обзор клуба</h3>
+            <p>Добро пожаловать в личный кабинет <b>${team.shortName}</b>. Здесь будет доступна статистика и форма игроков.</p>
         </div>
     `;
-    
-    document.getElementById('quick-ai-btn').onclick = () => {
-        runAIAnalysis(team.name, "текущей формы в лиге", "ближайший тур");
-    };
 }
 
-// 8. Контент вкладки "Матчи" (Календарь)
 async function loadMatchesTab(teamId) {
-    const content = document.getElementById('dashboard-content');
-    content.innerHTML = '<div class="loader">Получаем расписание матчей...</div>';
+    const content = document.getElementById('cabinet-content');
+    content.innerHTML = '<div class="loader">Загрузка расписания... 📅</div>';
 
     try {
+        // Запрос к API за матчами конкретной команды
         const response = await fetch(`/api/teams/${teamId}/matches`, {
             headers: { 'Authorization': `twa ${tg.initData}` }
         });
         const matches = await response.json();
 
         if (!matches || matches.length === 0) {
-            content.innerHTML = '<p class="loader">Предстоящих матчей не найдено.</p>';
+            content.innerHTML = '<p class="empty-state">Ближайших игр не запланировано</p>';
             return;
         }
 
-        content.innerHTML = '<h3 class="tab-title">Предстоящие игры</h3>';
-        
+        content.innerHTML = ''; // Очищаем лоадер
+
         matches.forEach(match => {
-            const date = new Date(match.utcDate).toLocaleDateString('ru-RU', {
-                day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'
-            });
+            // Форматируем дату: "15 янв, 22:00"
+            const dateObj = new Date(match.utcDate);
+            const dateStr = dateObj.toLocaleDateString('ru-RU', { day: 'numeric', month: 'short' });
+            const timeStr = dateObj.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
 
-            const item = document.createElement('div');
-            item.className = 'match-calendar-item';
-            item.innerHTML = `
-                <div class="match-date">${date}</div>
-                <div class="match-teams">
-                    <span>${match.homeTeam.shortName}</span>
-                    <span class="vs">vs</span>
-                    <span>${match.awayTeam.shortName}</span>
+            const isHome = match.homeTeam.id === teamId;
+            const opponent = isHome ? match.awayTeam : match.homeTeam;
+
+            const matchCard = document.createElement('div');
+            matchCard.className = 'match-card';
+            matchCard.innerHTML = `
+                <div class="match-info">
+                    <span class="match-date">${dateStr} • ${timeStr}</span>
+                    <span class="match-status">${isHome ? 'Дома' : 'В гостях'}</span>
                 </div>
-                <button class="mini-ai-btn">AI Анализ</button>
+                <div class="match-teams">
+                    <div class="team-mini">
+                        ${getTeamLogoHtml(match.homeTeam.name, "tiny-logo")}
+                        <span>${match.homeTeam.shortName}</span>
+                    </div>
+                    <div class="match-score">vs</div>
+                    <div class="team-mini">
+                        ${getTeamLogoHtml(match.awayTeam.name, "tiny-logo")}
+                        <span>${match.awayTeam.shortName}</span>
+                    </div>
+                </div>
+                <button class="btn-ai-mini" onclick="runAIAnalysis('${match.homeTeam.name}', '${match.awayTeam.name}', '${dateStr}')">
+                    🦾 Анализ ИИ
+                </button>
             `;
-
-            item.querySelector('.mini-ai-btn').onclick = () => {
-                tg.HapticFeedback.impactOccurred('medium');
-                runAIAnalysis(match.homeTeam.name, match.awayTeam.name, date);
-            };
-
-            content.appendChild(item);
+            content.appendChild(matchCard);
         });
     } catch (e) {
-        content.innerHTML = '<p class="error">Ошибка загрузки календаря. Попробуйте позже.</p>';
+        content.innerHTML = '<p class="error">Не удалось загрузить календарь</p>';
     }
 }
 
-// 9. Универсальная функция запуска ИИ
-async function runAIAnalysis(home, away, date) {
-    tg.MainButton.setText('ИИ анализирует...');
-    tg.MainButton.show();
-    tg.MainButton.showProgress();
-
-    try {
-        const response = await fetch('/api/analyze', {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-                'Authorization': `twa ${tg.initData}`
-            },
-            body: JSON.stringify({ homeTeam: home, awayTeam: away, date: date })
-        });
-        const data = await response.json();
-        tg.showAlert(`Прогноз на ${date}:\n\n${data.analysis}`);
-    } catch (e) {
-        tg.showAlert("Ошибка связи с ИИ-мозгом.");
-    } finally {
-        tg.MainButton.hide();
-    }
-}
-
-function getTeamLogoHtml(apiName) {
-    const lowerName = apiName.toLowerCase();
-    let fileName;
-
-    // Проверяем, есть ли команда в списке исключений
-    if (teamNameOverrides[lowerName]) {
-        fileName = teamNameOverrides[lowerName];
-    } else {
-        // Если нет, используем стандартную очистку
-        fileName = lowerName
-            .replace(/ fc| united| city| albion| wanderers| town| athletic/g, '')
-            .trim()
-            .replace(/\s+/g, '');
+/**
+ * СТАРТ ПРИЛОЖЕНИЯ ПРИ ЗАГРУЗКЕ
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    // --- 1. ПЕРЕХОД: ПРИВЕТСТВИЕ -> ВЫБОР СТРАНЫ ---
+    const startBtn = document.getElementById('start-btn');
+    if (startBtn) {
+        startBtn.onclick = () => {
+            tg.HapticFeedback.impactOccurred('light'); // Легкая вибрация
+            showScreen('screen-countries');
+        };
     }
 
-    const svgPath = `images/club/${fileName}.svg`;
-    const pngPath = `images/club/${fileName}.png`;
+    // --- 2. ПЕРЕХОД: ВЫБОР СТРАНЫ (АНГЛИЯ) -> ВЫБОР ЛИГИ ---
+    // Ищем активную карточку внутри экрана стран
+    const countryCard = document.querySelector('#screen-countries .item-card.active');
+    if (countryCard) {
+        countryCard.onclick = () => {
+            tg.HapticFeedback.selectionChanged();
+            showScreen('screen-leagues');
+        };
+    }
 
-    return `
-        <img 
-            src="${svgPath}" 
-            alt="${apiName}" 
-            class="team-logo-img"
-            onerror="this.onerror=null; this.src='${pngPath}';"
-        >
-    `;
-}
+    // --- 3. ПЕРЕХОД: ВЫБОР ЛИГИ (ПРЕМЬЕР-ЛИГА) -> СПИСОК КЛУБОВ ---
+    // Ищем активную карточку лиги (Премьер-лига)
+    const leagueCard = document.querySelector('#screen-leagues .item-card.active');
+    if (leagueCard) {
+        leagueCard.onclick = () => {
+            tg.HapticFeedback.selectionChanged();
+            loadTeams('PL1'); // Запускаем загрузку клубов
+        };
+    }
 
-function createTeamLogoHtml(apiName) {
-    // 1. Очищаем имя (как мы обсуждали ранее)
-    const cleanName = apiName
-        .toLowerCase()
-        .replace(/ fc| united| city| albion| wanderers| town| athletic/g, '')
-        .trim()
-        .replace(/\s+/g, '');
+    // --- 4. ЛОГИКА ТАБОВ ВНУТРИ КАБИНЕТА КЛУБА ---
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(btn => {
+        btn.onclick = function() {
+            // Переключаем визуальный фокус
+            tabButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
 
-    const svgPath = `images/club/${cleanName}.svg`;
-    const pngPath = `images/club/${cleanName}.png`;
+            // Определяем, какую вкладку загрузить
+            const tabName = this.innerText.trim();
+            if (tabName === 'Матчи') {
+                if (window.currentTeam) loadMatchesTab(window.currentTeam.id);
+            } else if (tabName === 'Обзор') {
+                if (window.currentTeam) loadOverview(window.currentTeam);
+            }
+            
+            tg.HapticFeedback.impactOccurred('light');
+        };
+    });
 
-    // 2. Возвращаем HTML с "предохранителем" onerror
-    return `
-        <img 
-            src="${svgPath}" 
-            alt="${apiName}" 
-            class="team-crest"
-            onerror="this.onerror=null; this.src='${pngPath}';"
-        >
-    `;
-}
-
-const teamNameOverrides = {
-    "manchester united fc": "manutd",
-    "manchester city fc": "mancity",
-    "tottenham hotspur fc": "spurs",
-    "west ham united fc": "westham",
-    "brighton & hove albion fc": "brighton",
-    "wolverhampton wanderers fc": "wolves"
-};
-
-// Стартовые привязки
-document.getElementById('start-btn').onclick = () => showScreen('leagues');
-document.querySelector('[data-league="PL1"]').onclick = () => loadTeams();
-
-// Запуск
-showScreen('disclaimer');
+    // --- ФИНАЛЬНЫЙ ШАГ: ЗАПУСК ПЕРВОГО ЭКРАНА ---
+    showScreen('screen-welcome');
+    console.log("Приложение инициализировано, первый экран запущен.");
+});

@@ -10,89 +10,94 @@
 </head>
 
 <body>
-
-    <section id="disclaimer-screen" class="screen">
-        <header class="header">
-            <img src="images/Liga/Premier_League_Logo.svg" alt="Logo" class="logo">
-            <h1 class="app-title">Футбольный дашборд</h1>
-        </header>
-        <div class="content">
-            <p class="disclaimer-text">Статистика и аналитика английских лиг.</p>
-            <ul class="features-list">
-                <li>🏆 Таблицы и статистика</li>
-                <li>📅 Актуальные матчи</li>
-                <li>🤖 ИИ-аналитика</li>
-            </ul>
-        </div>
-        <footer class="footer">
-            <button id="start-btn" class="btn-primary">Начать</button>
-        </footer>
-    </section>
-
-    <section id="league-menu" class="screen hidden">
-        <header class="header-compact">
-            <h2 class="section-title">Выберите лигу</h2>
-        </header>
-
-        <div class="league-grid">
-            <article class="league-card active" data-league="PL1">
-                <div class="league-flag">
-                    <img src="images/Liga/Flag_of_England.svg.png" alt="Англия" class="flag-icon">
-                </div>
-                <div class="league-info-wrapper">
-                    <h3 class="league-name">Премьер-лига</h3>
-                    <p class="league-season">Сезон 2025/26</p>
-                    <p class="league-desc">20 клубов • 3 вылета</p>
-                </div>
-                <div class="league-logo-decor">
-                    <img src="images/Liga/Premier_League_Logo.svg" alt="PL" class="icon-decor">
-                </div>
-            </article>
-
-            <article class="league-card disabled" data-league="EFL_CHAMPIONSHIP">
-                <div class="league-flag">
-                    <img src="images/Liga/Flag_of_England.svg.png" alt="Англия" class="flag-icon">
-                </div>
-                <div class="league-info-wrapper">
-                    <h3 class="league-name">Чемпионшип</h3>
-                    <p class="league-season">Сезон 2025/26</p>
-                </div>
-                <div class="league-logo-decor">
-                    <img src="images/Liga/Football_League_Championship.svg.png" alt="EFL" class="icon-decor">
-                </div>
-                <span class="unavailable-badge">×</span>
-            </article>
-
-        </div>
-    </section>
-
-    <section id="team-menu" class="screen hidden">
-        <header class="header-compact">
-            <h2 id="selected-league" class="section-title">Команды</h2>
-        </header>
-        <div id="teams-grid" class="grid-container">
-        </div>
-    </section>
-
-    <section id="team-dashboard" class="screen hidden">
-        <header class="team-header">
-            <button id="back-btn" class="btn-icon">←</button>
-            <div class="team-meta">
-                <div id="team-logo-container"></div>
-                <h1 id="team-name" class="team-title">Название команды</h1>
+<div id="app-container">
+    <section id="screen-welcome" class="screen">
+        <div class="content-wrapper">
+            <div class="header-area">
+                <div class="main-logo-circle">⚽</div>
+                <h1>Футбольный дашборд</h1>
             </div>
-        </header>
-        <nav class="dashboard-nav">
-            <button data-view="overview" class="nav-item active">Обзор</button>
-            <button data-view="matches" class="nav-item">Матчи</button>
-            <button data-view="table" class="nav-item">Таблица</button>
-            <button data-view="stats" class="nav-item">Статистика</button>
-        </nav>
-        <main id="dashboard-content" class="dashboard-content">
-        </main>
+            <div class="features-area">
+                <div class="feature-item">📊 Подробная статистика таблиц</div>
+                <div class="feature-item">📅 Календарь предстоящих игр</div>
+                <div class="feature-item">🤖 ИИ-прогнозы на каждый матч</div>
+            </div>
+            <div class="footer-area">
+                <button id="start-btn" class="btn-main">Войти в приложение</button>
+            </div>
+        </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="screen-countries" class="screen hidden">
+        <div class="content-wrapper">
+            <h2 class="page-title">Выбор страны</h2>
+            <div class="list-container">
+                <div class="item-card active" onclick="showScreen('screen-leagues')">
+                    <img src="images/Liga/Flag_of_England.svg.png" class="flag-icon">
+                    <div class="item-info">
+                        <span class="name">Англия</span>
+                        <span class="sub">Сезон 2025/26</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screen-leagues" class="screen hidden">
+        <div class="content-wrapper">
+            <h2 class="page-title">Английский футбол</h2>
+            <div class="list-container">
+                <div class="item-card active" onclick="loadTeams('PL1')">
+                    <img src="images/Liga/Premier_League_Logo.svg" class="league-icon">
+                    <div class="item-info">
+                        <span class="name">Премьер-лига</span>
+                        <span class="sub">20 клубов — выбывают 3</span>
+                    </div>
+                </div>
+                <div class="item-card disabled">
+                    <div class="item-info">
+                        <span class="name">Чемпионшип (EFL)</span>
+                        <span class="sub">24 клуба — 3 вверх, 3 вниз</span>
+                    </div>
+                    <span class="lock">🔒</span>
+                </div>
+                <div class="item-card disabled">
+                    <div class="item-info">
+                        <span class="name">Лига 1 (EFL)</span>
+                        <span class="sub">24 клуба — 3 вверх, 4 вниз</span>
+                    </div>
+                    <span class="lock">🔒</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screen-teams" class="screen hidden">
+        <div class="content-wrapper">
+            <h2 class="page-title">Выберите клуб</h2>
+            <div id="teams-grid" class="teams-grid">
+            </div>
+        </div>
+    </section>
+
+    <section id="screen-club-cabinet" class="screen hidden">
+        <div id="club-theme-bg"></div>
+        <div class="content-wrapper">
+            <header class="club-header">
+                <div id="cabinet-logo-place"></div>
+                <h1 id="cabinet-team-name">Название</h1>
+            </header>
+            <div class="tabs-nav">
+                <button class="tab-btn active">Обзор</button>
+                <button class="tab-btn">Матчи</button>
+                <button class="tab-btn">Состав</button>
+            </div>
+            <div id="cabinet-content" class="cabinet-body">
+            </div>
+        </div>
+    </section>
+</div>
 </body>
 
 </html>
