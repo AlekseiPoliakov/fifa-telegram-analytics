@@ -1,0 +1,3679 @@
+{
+  "57": {
+    "teamName": "Arsenal",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Mikel Arteta",
+      "country": "Spain",
+      "photo": "/images/club/arsenal/Mikel Arteta.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "David Raya",
+          "country": "Spain",
+          "photo": "/images/club/arsenal/RAYA_Headshot.png"
+        },
+        {
+          "num": 13,
+          "name": "Kepa Arrizabalaga",
+          "country": "Spain",
+          "photo": "/images/club/arsenal/KEPA_Headshot.png"
+        },
+        {
+          "num": 35,
+          "name": "Tommy Setford",
+          "country": "England",
+          "photo": "/images/club/arsenal/setford-headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 2,
+          "name": "William Saliba",
+          "country": "France",
+          "photo": "/images/club/arsenal/SALIBA_Headshot.png"
+        },
+        {
+          "num": 6,
+          "name": "Gabriel Magalhães",
+          "country": "Brazil",
+          "photo": "/images/club/arsenal/MAGALHAES_Headshot.png"
+        },
+        {
+          "num": 4,
+          "name": "Ben White",
+          "country": "England",
+          "photo": "/images/club/arsenal/B.WHITE_Headshot.png"
+        },
+        {
+          "num": 12,
+          "name": "Jurriën Timber",
+          "country": "Netherlands",
+          "photo": "/images/club/arsenal/TIMBER_Headshot.png"
+        },
+        {
+          "num": 33,
+          "name": "Riccardo Calafiori",
+          "country": "Italy",
+          "photo": "/images/club/arsenal/CALAFIORI_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Piero Hincapié",
+          "country": "Ecuador",
+          "photo": "/images/club/arsenal/hincapie-headshot.png"
+        },
+        {
+          "num": 3,
+          "name": "Cristhian Mosquera",
+          "country": "Spain",
+          "photo": "/images/club/arsenal/MOSQUERA_Headshot.png"
+        },
+        {
+          "num": 49,
+          "name": "Myles Lewis-Skelly",
+          "country": "England",
+          "photo": "/images/club/arsenal/LEWIS-SKELLY_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 8,
+          "name": "Martin Ødegaard",
+          "country": "Norway",
+          "photo": "/images/club/arsenal/ODEGAARD_Headshot.png"
+        },
+        {
+          "num": 41,
+          "name": "Declan Rice",
+          "country": "England",
+          "photo": "/images/club/arsenal/RICE_Headshot.png"
+        },
+        {
+          "num": 36,
+          "name": "Martin Zubimendi",
+          "country": "Spain",
+          "photo": "/images/club/arsenal/ZUBIMENDI_Headshot.png"
+        },
+        {
+          "num": 23,
+          "name": "Mikel Merino",
+          "country": "Spain",
+          "photo": "/images/club/arsenal/MERINO_Headshot.png"
+        },
+        {
+          "num": 16,
+          "name": "Christian Nørgaard",
+          "country": "Denmark",
+          "photo": "/images/club/arsenal/NORGAARD_Headshot.png"
+        },
+        {
+          "num": 22,
+          "name": "Ethan Nwaneri",
+          "country": "England",
+          "photo": "/images/club/arsenal/NWANERI_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 7,
+          "name": "Bukayo Saka",
+          "country": "England",
+          "photo": "/images/club/arsenal/SAKA_Headshot.png"
+        },
+        {
+          "num": 14,
+          "name": "Viktor Gyökeres",
+          "country": "Sweden",
+          "photo": "/images/club/arsenal/GYOKERES_Headshot.png"
+        },
+        {
+          "num": 10,
+          "name": "Eberechi Eze",
+          "country": "England",
+          "photo": "/images/club/arsenal/eze-headshot.png"
+        },
+        {
+          "num": 29,
+          "name": "Kai Havertz",
+          "country": "Germany",
+          "photo": "/images/club/arsenal/HAVERTZ_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Gabriel Martinelli",
+          "country": "Brazil",
+          "photo": "/images/club/arsenal/MARTINELLI_Headshot.png"
+        },
+        {
+          "num": 20,
+          "name": "Noni Madueke",
+          "country": "England",
+          "photo": "/images/club/arsenal/MADUEKE_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Gabriel Jesus",
+          "country": "Brazil",
+          "photo": "/images/club/arsenal/JESUS_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Leandro Trossard",
+          "country": "Belgium",
+          "photo": "/images/club/arsenal/TROSSARD_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 15,
+          "name": "Jakub Kiwior",
+          "country": "Poland",
+          "photo": "/images/club/arsenal/KIWIOR_Headshot.png"
+        },
+        {
+          "num": 17,
+          "name": "Oleksandr Zinchenko",
+          "country": "Ukraine",
+          "photo": "/images/club/arsenal/Zinchenko_Headshot.png"
+        },
+        {
+          "num": 21,
+          "name": "Fábio Vieira",
+          "country": "Portugal",
+          "photo": "/images/club/arsenal/VIEIRA_Headshot.png"
+        },
+        {
+          "num": 24,
+          "name": "Reiss Nelson",
+          "country": "England",
+          "photo": "/images/club/arsenal/NELSON_Headshot.png"
+        },
+        {
+          "num": 31,
+          "name": "Karl Hein",
+          "country": "Estonia",
+          "photo": "/images/club/arsenal/Hein.png"
+        }
+      ]
+    }
+  },
+
+  "65": {
+    "teamName": "Manchester City",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Pep Guardiola",
+      "country": "Spain",
+      "photo": "/images/club/city/pep-guardiola.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 25,
+          "name": "Gianluigi Donnarumma",
+          "country": "Italy",
+          "photo": "/images/club/city/donnaruma-elec.png"
+        },
+        {
+          "num": 18,
+          "name": "Stefan Ortega",
+          "country": "Germany",
+          "photo": "/images/club/city/stefan-ortega.png"
+        },
+        {
+          "num": 1,
+          "name": "James Trafford",
+          "country": "England",
+          "photo": "/images/club/city/james-trafford.png"
+        },
+        {
+          "num": 13,
+          "name": "Marcus Bettinelli",
+          "country": "England",
+          "photo": "/images/club/city/marcus-bettinelli-elec-blue.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 3,
+          "name": "Rúben Dias",
+          "country": "Portugal",
+          "photo": "/images/club/city/ruben-dias.png"
+        },
+        {
+          "num": 24,
+          "name": "Joško Gvardiol",
+          "country": "Croatia",
+          "photo": "/images/club/city/josko-gvardiol.png"
+        },
+        {
+          "num": 6,
+          "name": "Nathan Aké",
+          "country": "Netherlands",
+          "photo": "/images/club/city/nathan-ake.png"
+        },
+        {
+          "num": 5,
+          "name": "John Stones",
+          "country": "England",
+          "photo": "/images/club/city/john-stones.png"
+        },
+        {
+          "num": 15,
+          "name": "Marc Guéhi",
+          "country": "England",
+          "photo": "/images/club/city/marc-guehi.png"
+        },
+        {
+          "num": 45,
+          "name": "Abdukodir Khusanov",
+          "country": "Uzbekistan",
+          "photo": "/images/club/city/abdukodir-khusanov.png"
+        },
+        {
+          "num": 82,
+          "name": "Rico Lewis",
+          "country": "England",
+          "photo": "/images/club/city/rico-lewis-elec.png"
+        },
+        {
+          "num": 0,
+          "name": "Manuel Akanji",
+          "country": "Switzerland",
+          "photo": "/images/club/city/manuel-akanji.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 16,
+          "name": "Rodrigo",
+          "country": "Spain",
+          "photo": "/images/club/city/rodri-elec.png"
+        },
+        {
+          "num": 47,
+          "name": "Phil Foden",
+          "country": "England",
+          "photo": "/images/club/city/phil-foden.png"
+        },
+        {
+          "num": 20,
+          "name": "Bernardo Silva",
+          "country": "Portugal",
+          "photo": "/images/club/city/bernardo-silva.png"
+        },
+        {
+          "num": 4,
+          "name": "Tijjani Reijnders",
+          "country": "Netherlands",
+          "photo": "/images/club/city/tijjani-reijnders.png"
+        },
+        {
+          "num": 10,
+          "name": "Rayan Cherki",
+          "country": "France",
+          "photo": "/images/club/city/rayan-cherki.png"
+        },
+        {
+          "num": 30,
+          "name": "Claudio Echeverri",
+          "country": "Argentina",
+          "photo": "/images/club/city/claudio-echeverri.png"
+        },
+        {
+          "num": 26,
+          "name": "Savinho",
+          "country": "Brazil",
+          "photo": "/images/club/city/savinho-elec.png"
+        },
+        {
+          "num": 14,
+          "name": "Nico Gonzalez",
+          "country": "Spain",
+          "photo": "/images/club/city/nico-gonzalez.png"
+        },
+        {
+          "num": 8,
+          "name": "Mateo Kovačić",
+          "country": "Croatia",
+          "photo": "/images/club/city/mateo-kovacic.png"
+        },
+        {
+          "num": 52,
+          "name": "Oscar Bobb",
+          "country": "Norway",
+          "photo": "/images/club/city/oscar-bobb.png"
+        },
+        {
+          "num": 0,
+          "name": "Sverre Nypan",
+          "country": "Norway",
+          "photo": "/images/club/city/Sverre-Nypan.png"
+        },
+        {
+          "num": 42,
+          "name": "Antoine Semenyo",
+          "country": "Ghana",
+          "photo": "/images/club/city/semenyo.png"
+        },
+        {
+          "num": 44,
+          "name": "Kalvin Phillips",
+          "country": "England",
+          "photo": "/images/club/city/kalvin-phillips.png"
+        },
+        {
+          "num": 33,
+          "name": "Nico O'Reilly",
+          "country": "England",
+          "photo": "/images/club/city/nico-oreilly.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 9,
+          "name": "Erling Haaland",
+          "country": "Norway",
+          "photo": "/images/club/city/erling-haaland.png"
+        },
+        {
+          "num": 7,
+          "name": "Omar Marmoush",
+          "country": "Egypt",
+          "photo": "/images/club/city/omar-marmoush.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 21,
+          "name": "Rayan Aït-Nouri",
+          "country": "Algeria",
+          "photo": "/images/club/city/rayan-ait-nouri.png"
+        },
+        {
+          "num": 11,
+          "name": "Jérémy Doku",
+          "country": "Belgium",
+          "photo": "/images/club/city/jeremy-doku.png"
+        },
+        {
+          "num": 22,
+          "name": "Vitor Reis",
+          "country": "Brazil",
+          "photo": "/images/club/city/vitor-reis.png"
+        },
+        {
+          "num": 27,
+          "name": "Matheus Nunes",
+          "country": "Portugal",
+          "photo": "/images/club/city/matheus-nunes.png"
+        },
+        {
+          "num": 97,
+          "name": "Joshua Wilson-Esbrand",
+          "country": "England",
+          "photo": "/images/club/city/joshua-wilson.png"
+        },
+        {
+          "num": 0,
+          "name": "Jack Grealish",
+          "country": "England",
+          "photo": "/images/club/city/jack-grealish.png"
+        }
+      ]
+    }
+  },
+
+  "58": {
+    "teamName": "astonvilla",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Unai Emery",
+      "country": "Spain",
+      "photo": "images/club/villa/Unai Emery.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 23,
+          "name": "Emiliano Martínez",
+          "country": "Argentina",
+          "photo": "/images/club/villa/Emiliano-Martínez.png"
+        },
+        {
+          "num": 40,
+          "name": "Marco Bizot",
+          "country": "Netherlands",
+          "photo": "/images/club/villa/Marco-Bizot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 14,
+          "name": "Pau Torres",
+          "country": "Spain",
+          "photo": "/images/club/villa/Pau-Torres.png"
+        },
+        {
+          "num": 4,
+          "name": "Ezri Konsa",
+          "country": "England",
+          "photo": "/images/club/villa/Ezri-Konsa.png"
+        },
+        {
+          "num": 3,
+          "name": "Victor Lindelöf",
+          "country": "Sweden",
+          "photo": "/images/club/villa/Victor-Lindelöf.png"
+        },
+        {
+          "num": 5,
+          "name": "Tyrone Mings",
+          "country": "England",
+          "photo": "/images/club/villa/Tyrone-Mings.png"
+        },
+        {
+          "num": 22,
+          "name": "Ian Maatsen",
+          "country": "Netherlands",
+          "photo": "/images/club/villa/Ian-Maatsen.png"
+        },
+        {
+          "num": 12,
+          "name": "Lucas Digne",
+          "country": "France",
+          "photo": "/images/club/villa/Lucas-Digne.png"
+        },
+        {
+          "num": 2,
+          "name": "Matty Cash",
+          "country": "Poland",
+          "photo": "/images/club/villa/Matty-Cash.png"
+        },
+        {
+          "num": 16,
+          "name": "Andrés García",
+          "country": "Spain",
+          "photo": "/images/club/villa/Andrés-García.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 7,
+          "name": "John McGinn",
+          "country": "Scotland",
+          "photo": "/images/club/villa/John-McGinn.png"
+        },
+        {
+          "num": 24,
+          "name": "Amadou Onana",
+          "country": "Belgium",
+          "photo": "/images/club/villa/Amadou-Onana.png"
+        },
+        {
+          "num": 8,
+          "name": "Youri Tielemans",
+          "country": "Belgium",
+          "photo": "/images/club/villa/Youri-Tielemans.png"
+        },
+        {
+          "num": 9,
+          "name": "Harvey Elliott",
+          "country": "England",
+          "photo": "/images/club/villa/Harvey-Elliott.png"
+        },
+        {
+          "num": 19,
+          "name": "Jadon Sancho",
+          "country": "England",
+          "photo": "/images/club/villa/Jadon-Sancho.png"
+        },
+        {
+          "num": 10,
+          "name": "Emiliano Buendía",
+          "country": "Argentina",
+          "photo": "/images/club/villa/Emiliano-Buendía.png"
+        },
+        {
+          "num": 44,
+          "name": "Boubacar Kamara",
+          "country": "France",
+          "photo": "/images/club/villa/Boubacar-Kamara.png"
+        },
+        {
+          "num": 27,
+          "name": "Morgan Rogers",
+          "country": "England",
+          "photo": "/images/club/villa/Morgan-Rogers.png"
+        },
+        {
+          "num": 6,
+          "name": "Ross Barkley",
+          "country": "England",
+          "photo": "/images/club/villa/Ross-Barkley.png"
+        },
+        {
+          "num": 29,
+          "name": "Evann Guessand",
+          "country": "Ivory Coast",
+          "photo": "/images/club/villa/Evann-Guessand.png"
+        },
+        {
+          "num": 26,
+          "name": "Lamare Bogarde",
+          "country": "Netherlands",
+          "photo": "/images/club/villa/Lamare-Bogarde.png"
+        },
+        {
+          "num": 47,
+          "name": "Alysson Edward",
+          "country": "Brazil",
+          "photo": "/images/club/villa/Alysson-Edward-Franco-da-Rochados-Santos.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 11,
+          "name": "Ollie Watkins",
+          "country": "England",
+          "photo": "/images/club/villa/Ollie-Watkins.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 0,
+          "name": "Leon Bailey",
+          "country": "Jamaica",
+          "photo": "/images/club/villa/Leon-Bailey.png"
+        },
+        {
+          "num": 0,
+          "name": "Samuel Iling-Jr",
+          "country": "England",
+          "photo": "/images/club/villa/Samuel-IlingJr.png"
+        },
+        {
+          "num": 0,
+          "name": "Enzo Barrenechea",
+          "country": "Argentina",
+          "photo": "/images/club/villa/Enzo-Barrenechea.png"
+        },
+        {
+          "num": 0,
+          "name": "Kosta Nedeljković",
+          "country": "Serbia",
+          "photo": "/images/club/villa/Kosta-Nedeljković.png"
+        },
+        {
+          "num": 0,
+          "name": "Lewis Dobbin",
+          "country": "England",
+          "photo": "/images/club/villa/Lewis-Dobbin.png"
+        },
+        {
+          "num": 0,
+          "name": "Joe Gauci",
+          "country": "Australia",
+          "photo": "/images/club/villa/Joe-Gauci.png"
+        },
+        {
+          "num": 0,
+          "name": "Oliwier Zych",
+          "country": "Poland",
+          "photo": "/images/club/villa/Oliwier-Zych.png"
+        }
+      ]
+    }
+  },
+
+  "64": {
+    "teamName": "Liverpool",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Arne Slot",
+      "country": "Netherlands",
+      "photo": "/images/club/liverpool/Arne_Slot.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Alisson Becker",
+          "country": "Brazil",
+          "photo": "/images/club/liverpool/alisson-becker.png"
+        },
+        {
+          "num": 25,
+          "name": "Giorgi Mamardashvili",
+          "country": "Georgia",
+          "photo": "/images/club/liverpool/giorgi-mamardashvili.png"
+        },
+        {
+          "num": 28,
+          "name": "Freddie Woodman",
+          "country": "England",
+          "photo": "/images/club/liverpool/freddie-woodman.png"
+        },
+        {
+          "num": 41,
+          "name": "Armin Pecsi",
+          "country": "Hungary",
+          "photo": "/images/club/liverpool/armin-pecsi.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 4,
+          "name": "Virgil van Dijk",
+          "country": "Netherlands",
+          "photo": "/images/club/liverpool/virgil-van-dijk.png"
+        },
+        {
+          "num": 5,
+          "name": "Ibrahima Konaté",
+          "country": "France",
+          "photo": "/images/club/liverpool/ibrahima-konate.png"
+        },
+        {
+          "num": 2,
+          "name": "Joe Gomez",
+          "country": "England",
+          "photo": "/images/club/liverpool/joe-gomez.png"
+        },
+        {
+          "num": 26,
+          "name": "Andy Robertson",
+          "country": "Scotland",
+          "photo": "/images/club/liverpool/andy-robertson.png"
+        },
+        {
+          "num": 30,
+          "name": "Jeremie Frimpong",
+          "country": "Netherlands",
+          "photo": "/images/club/liverpool/jeremie-frimpong.png"
+        },
+        {
+          "num": 6,
+          "name": "Milos Kerkez",
+          "country": "Hungary",
+          "photo": "/images/club/liverpool/milos-kerkez.png"
+        },
+        {
+          "num": 12,
+          "name": "Conor Bradley",
+          "country": "Northern Ireland",
+          "photo": "/images/club/liverpool/conor-bradley.png"
+        },
+        {
+          "num": 15,
+          "name": "Giovanni Leoni",
+          "country": "Italy",
+          "photo": "/images/club/liverpool/giovanni-leoni.png"
+        },
+        {
+          "num": 46,
+          "name": "Rhys Williams",
+          "country": "England",
+          "photo": "/images/club/liverpool/rhys-williams.png"
+        },
+        {
+          "num": 47,
+          "name": "Calvin Ramsay",
+          "country": "Scotland",
+          "photo": "/images/club/liverpool/calvin-ramsay-headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 10,
+          "name": "Alexis Mac Allister",
+          "country": "Argentina",
+          "photo": "/images/club/liverpool/alexis-mac-allister.png"
+        },
+        {
+          "num": 8,
+          "name": "Dominik Szoboszlai",
+          "country": "Hungary",
+          "photo": "/images/club/liverpool/dominik-szoboszlai.png"
+        },
+        {
+          "num": 7,
+          "name": "Florian Wirtz",
+          "country": "Germany",
+          "photo": "/images/club/liverpool/florian-wirtz.png"
+        },
+        {
+          "num": 38,
+          "name": "Ryan Gravenberch",
+          "country": "Netherlands",
+          "photo": "/images/club/liverpool/ryan-gravenberch.png"
+        },
+        {
+          "num": 17,
+          "name": "Curtis Jones",
+          "country": "England",
+          "photo": "/images/club/liverpool/curtis-jones.png"
+        },
+        {
+          "num": 3,
+          "name": "Wataru Endo",
+          "country": "Japan",
+          "photo": "/images/club/liverpool/wataru-endo.png"
+        },
+        {
+          "num": 43,
+          "name": "Stefan Bajcetic",
+          "country": "Spain",
+          "photo": "/images/club/liverpool/stefan-bajcetic.png"
+        },
+        {
+          "num": 42,
+          "name": "Trey Nyoni",
+          "country": "England",
+          "photo": "/images/club/liverpool/trey-nyoni.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 11,
+          "name": "Mohamed Salah",
+          "country": "Egypt",
+          "photo": "/images/club/liverpool/mohamed-salah.png"
+        },
+        {
+          "num": 9,
+          "name": "Alexander Isak",
+          "country": "Sweden",
+          "photo": "/images/club/liverpool/alexander-isak.png"
+        },
+        {
+          "num": 18,
+          "name": "Cody Gakpo",
+          "country": "Netherlands",
+          "photo": "/images/club/liverpool/cody-gakpo.png"
+        },
+        {
+          "num": 20,
+          "name": "Diogo Jota",
+          "country": "Portugal",
+          "photo": "/images/club/liverpool/diogo-jota.png"
+        },
+        {
+          "num": 14,
+          "name": "Federico Chiesa",
+          "country": "Italy",
+          "photo": "/images/club/liverpool/federico-chiesa.png"
+        },
+        {
+          "num": 22,
+          "name": "Hugo Ekitike",
+          "country": "France",
+          "photo": "/images/club/liverpool/hugo-ekitike.png"
+        },
+        {
+          "num": 73,
+          "name": "Rio Ngumoha",
+          "country": "England",
+          "photo": "/images/club/liverpool/rio-ngumoha.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 19,
+          "name": "Harvey Elliott",
+          "country": "England",
+          "photo": "/images/club/liverpool/harvey-elliott.png"
+        },
+        {
+          "num": 21,
+          "name": "Kostas Tsimikas",
+          "country": "Greece",
+          "photo": "/images/club/liverpool/kostas-tsimikas.png"
+        },
+        {
+          "num": 56,
+          "name": "Vitezslav Jaros",
+          "country": "Czech Republic",
+          "photo": "/images/club/liverpool/vitezslav-jaros.png"
+        },
+        {
+          "num": 95,
+          "name": "Harvey Davies",
+          "country": "England",
+          "photo": "/images/club/liverpool/harvey-davies.png"
+        },
+        {
+          "num": 53,
+          "name": "James McConnell",
+          "country": "England",
+          "photo": "/images/club/liverpool/james-mcconnell.png"
+        }
+      ]
+    }
+  },
+
+  "66": {
+    "teamName": "manutd",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Michael Carrick",
+      "country": "England",
+      "photo": "/images/Trener/Michael Carrick.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Altay Bayindir",
+          "country": "Turkey",
+          "photo": "/images/club/manutd/1_Altay_Bayindir.png"
+        },
+        {
+          "num": 22,
+          "name": "Tom Heaton",
+          "country": "England",
+          "photo": "/images/club/manutd/22_Tom_Heaton.png"
+        },
+        {
+          "num": 31,
+          "name": "Senne Lammens",
+          "country": "Belgium",
+          "photo": "/images/club/manutd/Senne_Lammens.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 4,
+          "name": "Matthijs De Ligt",
+          "country": "Netherlands",
+          "photo": "/images/club/manutd/4_Matthijs_DeLigt.png"
+        },
+        {
+          "num": 6,
+          "name": "Lisandro Martínez",
+          "country": "Argentina",
+          "photo": "/images/club/manutd/6_Lisandro_Martinez.png"
+        },
+        {
+          "num": 15,
+          "name": "Leny Yoro",
+          "country": "France",
+          "photo": "/images/club/manutd/15_Leny_Yoro.png"
+        },
+        {
+          "num": 5,
+          "name": "Harry Maguire",
+          "country": "England",
+          "photo": "/images/club/manutd/5_Harry_Maguire.png"
+        },
+        {
+          "num": 2,
+          "name": "Diogo Dalot",
+          "country": "Portugal",
+          "photo": "/images/club/manutd/20_Diogo_Dalot.png"
+        },
+        {
+          "num": 3,
+          "name": "Noussair Mazraoui",
+          "country": "Morocco",
+          "photo": "/images/club/manutd/3_Noussair_Mazraoui.png"
+        },
+        {
+          "num": 23,
+          "name": "Luke Shaw",
+          "country": "England",
+          "photo": "/images/club/manutd/23_Luke_Shaw.png"
+        },
+        {
+          "num": 12,
+          "name": "Tyrell Malacia",
+          "country": "Netherlands",
+          "photo": "/images/club/manutd/12_Tyrell_Malacia.png"
+        },
+        {
+          "num": 13,
+          "name": "Patrick Dorgu",
+          "country": "Denmark",
+          "photo": "/images/club/manutd/13_Patrick_Dorgu.png"
+        },
+        {
+          "num": 26,
+          "name": "Ayden Heaven",
+          "country": "England",
+          "photo": "/images/club/manutd/26_Ayden_Heaven.png"
+        },
+        {
+          "num": 33,
+          "name": "Tyler Fredricson",
+          "country": "England",
+          "photo": "/images/club/manutd/55_Tyler_Fredricson.png"
+        },
+        {
+          "num": 35,
+          "name": "Diego Leon",
+          "country": "Spain",
+          "photo": "/images/club/manutd/Diego_Leon.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 8,
+          "name": "Bruno Fernandes",
+          "country": "Portugal",
+          "photo": "/images/club/manutd/8_Bruno_Fernandes.png"
+        },
+        {
+          "num": 37,
+          "name": "Kobbie Mainoo",
+          "country": "England",
+          "photo": "/images/club/manutd/37_Kobbie_Mainoo.png"
+        },
+        {
+          "num": 25,
+          "name": "Manuel Ugarte",
+          "country": "Uruguay",
+          "photo": "/images/club/manutd/25_Manuel_Ugarte.png"
+        },
+        {
+          "num": 18,
+          "name": "Casemiro",
+          "country": "Brazil",
+          "photo": "/images/club/manutd/18_Casemiro.png"
+        },
+        {
+          "num": 7,
+          "name": "Mason Mount",
+          "country": "England",
+          "photo": "/images/club/manutd/7_Mason_Mount.png"
+        },
+        {
+          "num": 43,
+          "name": "Toby Collyer",
+          "country": "England",
+          "photo": "/images/club/manutd/43_Toby_Collyer.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 30,
+          "name": "Benjamin Šeško",
+          "country": "Slovenia",
+          "photo": "/images/club/manutd/Benjamin_Sesko.png"
+        },
+        {
+          "num": 10,
+          "name": "Matheus Cunha",
+          "country": "Brazil",
+          "photo": "/images/club/manutd/Matheus_Cunha.png"
+        },
+        {
+          "num": 19,
+          "name": "Bryan Mbeumo",
+          "country": "Cameroon",
+          "photo": "/images/club/manutd/Bryan_Mbeumo.png"
+        },
+        {
+          "num": 11,
+          "name": "Joshua Zirkzee",
+          "country": "Netherlands",
+          "photo": "/images/club/manutd/11_Joshua_Zirkzee.png"
+        },
+        {
+          "num": 16,
+          "name": "Amad Diallo",
+          "country": "Ivory Coast",
+          "photo": "/images/club/manutd/16_Amad.png"
+        },
+        {
+          "num": 32,
+          "name": "Chido Obi-Martin",
+          "country": "Denmark",
+          "photo": "/images/club/manutd/32_Chido_Obi.png"
+        },
+        {
+          "num": 36,
+          "name": "Ethan Wheatley",
+          "country": "England",
+          "photo": "/images/club/manutd/36_Ethan_Wheatley.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 24,
+          "name": "André Onana",
+          "country": "Cameroon",
+          "photo": "/images/club/manutd/Andre_Onana.png"
+        },
+        {
+          "num": 9,
+          "name": "Rasmus Højlund",
+          "country": "Denmark",
+          "photo": "/images/club/manutd/Rasmus_Hojlund.png"
+        },
+        {
+          "num": 0,
+          "name": "Marcus Rashford",
+          "country": "England",
+          "photo": "/images/club/manutd/Marcus_Rashford.png"
+        },
+        {
+          "num": 0,
+          "name": "Jadon Sancho",
+          "country": "England",
+          "photo": "/images/club/manutd/Jadon_Sancho.png"
+        },
+        {
+          "num": 41,
+          "name": "Harry Amass",
+          "country": "England",
+          "photo": "/images/club/manutd/Harry_Amass.png"
+        },
+        {
+          "num": 44,
+          "name": "Dan Gore",
+          "country": "England",
+          "photo": "/images/club/manutd/Dan_Gore.png"
+        }
+      ]
+    }
+  },
+
+  "61": {
+    "teamName": "Chelsea",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Liam Rosenior",
+      "country": "England",
+      "photo": "/images/Trener/Chelsea – Liam Rosenior.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Robert Sánchez",
+          "country": "Spain",
+          "photo": "/images/club/chelsea/Robert_Sanchez.png"
+        },
+        {
+          "num": 12,
+          "name": "Filip Jørgensen",
+          "country": "Denmark",
+          "photo": "/images/club/chelsea/Filip_Jorgensen.png"
+        },
+        {
+          "num": 44,
+          "name": "Gaga Slonina",
+          "country": "USA",
+          "photo": "/images/club/chelsea/Gaga_Slonina.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 24,
+          "name": "Reece James",
+          "country": "England",
+          "photo": "/images/club/chelsea/Reece_James.png"
+        },
+        {
+          "num": 6,
+          "name": "Levi Colwill",
+          "country": "England",
+          "photo": "/images/club/chelsea/Levi_Colwill.png"
+        },
+        {
+          "num": 29,
+          "name": "Wesley Fofana",
+          "country": "France",
+          "photo": "/images/club/chelsea/Wesley_Fofana.png"
+        },
+        {
+          "num": 21,
+          "name": "Jorrel Hato",
+          "country": "Netherlands",
+          "photo": "/images/club/chelsea/Jorrel_Hato.png"
+        },
+        {
+          "num": 3,
+          "name": "Marc Cucurella",
+          "country": "Spain",
+          "photo": "/images/club/chelsea/Marc_Cucurella.png"
+        },
+        {
+          "num": 27,
+          "name": "Malo Gusto",
+          "country": "France",
+          "photo": "/images/club/chelsea/Malo_Gusto.png"
+        },
+        {
+          "num": 5,
+          "name": "Benoît Badiashile",
+          "country": "France",
+          "photo": "/images/club/chelsea/Benoit_Badiashile.png"
+        },
+        {
+          "num": 23,
+          "name": "Trevoh Chalobah",
+          "country": "England",
+          "photo": "/images/club/chelsea/Trevoh_Chalobah.png"
+        },
+        {
+          "num": 4,
+          "name": "Tosin Adarabioyo",
+          "country": "England",
+          "photo": "/images/club/chelsea/Tosin_Adarabioyo.png"
+        },
+        {
+          "num": 34,
+          "name": "Josh Acheampong",
+          "country": "England",
+          "photo": "/images/club/chelsea/Josh_Acheampong.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 10,
+          "name": "Cole Palmer",
+          "country": "England",
+          "photo": "/images/club/chelsea/Cole_Palmer.png"
+        },
+        {
+          "num": 8,
+          "name": "Enzo Fernández",
+          "country": "Argentina",
+          "photo": "/images/club/chelsea/Enzo_Fernandez.png"
+        },
+        {
+          "num": 25,
+          "name": "Moisés Caicedo",
+          "country": "Ecuador",
+          "photo": "/images/club/chelsea/Moises_Caicedo.png"
+        },
+        {
+          "num": 45,
+          "name": "Roméo Lavia",
+          "country": "Belgium",
+          "photo": "/images/club/chelsea/Romeo_Lavia.png"
+        },
+        {
+          "num": 17,
+          "name": "Andrey Santos",
+          "country": "Brazil",
+          "photo": "/images/club/chelsea/Andrey_Santos.png"
+        },
+        {
+          "num": 14,
+          "name": "Dário Essugo",
+          "country": "Portugal",
+          "photo": "/images/club/chelsea/Dario_Essugo.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 49,
+          "name": "Alejandro Garnacho",
+          "country": "Argentina",
+          "photo": "/images/club/chelsea/Alejandro_Garnacho.png"
+        },
+        {
+          "num": 20,
+          "name": "João Pedro",
+          "country": "Brazil",
+          "photo": "/images/club/chelsea/Joao_Pedro.png"
+        },
+        {
+          "num": 41,
+          "name": "Estêvão Willian",
+          "country": "Brazil",
+          "photo": "/images/club/chelsea/Estevao.png"
+        },
+        {
+          "num": 7,
+          "name": "Pedro Neto",
+          "country": "Portugal",
+          "photo": "/images/club/chelsea/Pedro_Neto.png"
+        },
+        {
+          "num": 11,
+          "name": "Jamie Gittens",
+          "country": "England",
+          "photo": "/images/club/chelsea/Jamie_Gittens.png"
+        },
+        {
+          "num": 0,
+          "name": "Mykhailo Mudryk",
+          "country": "Ukraine",
+          "photo": "/images/club/chelsea/Mykhailo-Mudryk.png"
+        },
+        {
+          "num": 9,
+          "name": "Liam Delap",
+          "country": "England",
+          "photo": "/images/club/chelsea/Liam_Delap.png"
+        },
+        {
+          "num": 38,
+          "name": "Marc Guiu",
+          "country": "Spain",
+          "photo": "/images/club/chelsea/Marc_Guiu.png"
+        },
+        {
+          "num": 32,
+          "name": "Tyrique George",
+          "country": "England",
+          "photo": "/images/club/chelsea/Tyrique_George.png"
+        }
+      ]
+    }
+  },
+
+  "402": {
+    "teamName": "Brentford",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Keith Andrews",
+      "country": "Ireland",
+      "photo": "/images/Trener/Brentford – Keith Andrews.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Caoimhín Kelleher",
+          "country": "Ireland",
+          "photo": "/images/club/brentford/Caoimhín Kelleher.png"
+        },
+        {
+          "num": 12,
+          "name": "Hákon Valdimarsson",
+          "country": "Iceland",
+          "photo": "/images/club/brentford/Hákon Valdimarsson.png"
+        },
+        {
+          "num": 31,
+          "name": "Ellery Balcombe",
+          "country": "England",
+          "photo": "/images/club/brentford/Ellery Balcombe.png"
+        },
+        {
+          "num": 41,
+          "name": "Julian Eyestone",
+          "country": "USA",
+          "photo": "/images/club/brentford/Julian Eyestone.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 22,
+          "name": "Nathan Collins",
+          "country": "Ireland",
+          "photo": "/images/club/brentford/Nathan Collins.png"
+        },
+        {
+          "num": 20,
+          "name": "Kristoffer Ajer",
+          "country": "Norway",
+          "photo": "/images/club/brentford/Kristoffer Ajer.png"
+        },
+        {
+          "num": 4,
+          "name": "Sepp van den Berg",
+          "country": "Netherlands",
+          "photo": "/images/club/brentford/Sepp van den Berg.png"
+        },
+        {
+          "num": 5,
+          "name": "Ethan Pinnock",
+          "country": "Jamaica",
+          "photo": "/images/club/brentford/Ethan Pinnock.png"
+        },
+        {
+          "num": 2,
+          "name": "Aaron Hickey",
+          "country": "Scotland",
+          "photo": "/images/club/brentford/Aaron Hickey.png"
+        },
+        {
+          "num": 3,
+          "name": "Rico Henry",
+          "country": "England",
+          "photo": "/images/club/brentford/Rico Henry.png"
+        },
+        {
+          "num": 33,
+          "name": "Michael Kayode",
+          "country": "Italy",
+          "photo": "/images/club/brentford/Michael Kayode.png"
+        },
+        {
+          "num": 43,
+          "name": "Benjamin Arthur",
+          "country": "England",
+          "photo": "/images/club/brentford/Benjamin Arthur.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 6,
+          "name": "Jordan Henderson",
+          "country": "England",
+          "photo": "/images/club/brentford/Jordan Henderson.png"
+        },
+        {
+          "num": 8,
+          "name": "Mathias Jensen",
+          "country": "Denmark",
+          "photo": "/images/club/brentford/Mathias Jensen.png"
+        },
+        {
+          "num": 27,
+          "name": "Vitaly Janelt",
+          "country": "Germany",
+          "photo": "/images/club/brentford/Vitaly Janelt.png"
+        },
+        {
+          "num": 14,
+          "name": "Fábio Carvalho",
+          "country": "Portugal",
+          "photo": "/images/club/brentford/Fábio Carvalho.png"
+        },
+        {
+          "num": 24,
+          "name": "Mikkel Damsgaard",
+          "country": "Denmark",
+          "photo": "/images/club/brentford/Mikkel Damsgaard.png"
+        },
+        {
+          "num": 17,
+          "name": "Antoni Milambo",
+          "country": "Netherlands",
+          "photo": "/images/club/brentford/Antoni Milambo.png"
+        },
+        {
+          "num": 15,
+          "name": "Frank Onyeka",
+          "country": "Nigeria",
+          "photo": "/images/club/brentford/Frank Onyeka.png"
+        },
+        {
+          "num": 18,
+          "name": "Yehor Yarmolyuk",
+          "country": "Ukraine",
+          "photo": "/images/club/brentford/Yehor Yarmolyuk.png"
+        },
+        {
+          "num": 32,
+          "name": "Paris Maghoma",
+          "country": "England",
+          "photo": "/images/club/brentford/Paris Maghoma.png"
+        },
+        {
+          "num": 10,
+          "name": "Josh Dasilva",
+          "country": "England",
+          "photo": "/images/club/brentford/Josh Dasilva.png"
+        },
+        {
+          "num": 45,
+          "name": "Romelle Donovan",
+          "country": "England",
+          "photo": "/images/club/brentford/Romelle Donovan.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 9,
+          "name": "Igor Thiago",
+          "country": "Brazil",
+          "photo": "/images/club/brentford/Igor Thiago.png"
+        },
+        {
+          "num": 7,
+          "name": "Kevin Schade",
+          "country": "Germany",
+          "photo": "/images/club/brentford/Kevin Schade.png"
+        },
+        {
+          "num": 19,
+          "name": "Dango Ouattara",
+          "country": "Burkina Faso",
+          "photo": "/images/club/brentford/Dango Ouattara.png"
+        },
+        {
+          "num": 23,
+          "name": "Keane Lewis-Potter",
+          "country": "England",
+          "photo": "/images/club/brentford/Keane Lewis-Potter.png"
+        },
+        {
+          "num": 39,
+          "name": "Gustavo Nunes",
+          "country": "Brazil",
+          "photo": "/images/club/brentford/Gustavo Nunes.png"
+        },
+        {
+          "num": 47,
+          "name": "Kaye Furo",
+          "country": "Belgium",
+          "photo": "/images/club/brentford/Kaye Furo.png"
+        },
+        {
+          "num": 0,
+          "name": "Reiss Nelson",
+          "country": "England",
+          "photo": "/images/club/brentford/Reiss Nelson.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 13,
+          "name": "Matthew Cox",
+          "country": "England",
+          "photo": "/images/club/brentford/Matthew Cox.png"
+        },
+        {
+          "num": 21,
+          "name": "Jayden Meghoma",
+          "country": "England",
+          "photo": "/images/club/brentford/Jayden Meghoma.png"
+        },
+        {
+          "num": 26,
+          "name": "Yunus Emre Konak",
+          "country": "Turkey",
+          "photo": "/images/club/brentford/Yunus Emre Konak.png"
+        },
+        {
+          "num": 0,
+          "name": "Ethan Brierley",
+          "country": "England",
+          "photo": "/images/club/brentford/Ethan_Brierley.png"
+        },
+        {
+          "num": 0,
+          "name": "Tony Yogane",
+          "country": "England",
+          "photo": "/images/club/brentford/Tony_Yogane.png"
+        },
+        {
+          "num": 0,
+          "name": "Ben Krauhaus",
+          "country": "England",
+          "photo": "/images/club/brentford/Ben_Krauhaus.png"
+        },
+        {
+          "num": 0,
+          "name": "Kim Ji-soo",
+          "country": "South Korea",
+          "photo": "/images/club/brentford/Kim_Ji-soo.png"
+        },
+        {
+          "num": 0,
+          "name": "Benjamin Fredrick",
+          "country": "Nigeria",
+          "photo": "/images/club/brentford/Benjamin_Fredrick.png"
+        },
+        {
+          "num": 0,
+          "name": "Ryan Trevitt",
+          "country": "England",
+          "photo": "/images/club/brentford/Ryan_Trevitt.png"
+        },
+        {
+          "num": 0,
+          "name": "Chanse Headman",
+          "country": "England",
+          "photo": "/images/club/brentford/Chanse_Headman.png"
+        },
+        {
+          "num": 0,
+          "name": "Iwan Morgan",
+          "country": "Wales",
+          "photo": "/images/club/brentford/Iwan_Morgan.png"
+        },
+        {
+          "num": 0,
+          "name": "Michael Olakigbe",
+          "country": "England",
+          "photo": "/images/club/brentford/Michael_Olakigbe.png"
+        }
+      ]
+    }
+  },
+
+  "340": {
+    "teamName": "Sunderland",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Régis Le Bris",
+      "country": "France",
+      "photo": "/images/Trener/Sunderland – Régis Le Bris.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 22,
+          "name": "Robin Roefs",
+          "country": "Netherlands",
+          "photo": "/images/club/sunderland/Robin Roefs.png"
+        },
+        {
+          "num": 1,
+          "name": "Anthony Patterson",
+          "country": "England",
+          "photo": "/images/club/sunderland/Anthony Patterson.png"
+        },
+        {
+          "num": 21,
+          "name": "Simon Moore",
+          "country": "England",
+          "photo": "/images/club/sunderland/Simon Moore.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 32,
+          "name": "Trai Hume",
+          "country": "Northern Ireland",
+          "photo": "/images/club/sunderland/Trai Hume.png"
+        },
+        {
+          "num": 6,
+          "name": "Lutsharel Geertruida",
+          "country": "Netherlands",
+          "photo": "/images/club/sunderland/Lutsharel Geertruida.png"
+        },
+        {
+          "num": 15,
+          "name": "Omar Alderete",
+          "country": "Paraguay",
+          "photo": "/images/club/sunderland/Omar Alderete.png"
+        },
+        {
+          "num": 3,
+          "name": "Dennis Cirkin",
+          "country": "England",
+          "photo": "/images/club/sunderland/Dennis Cirkin.png"
+        },
+        {
+          "num": 5,
+          "name": "Dan Ballard",
+          "country": "Northern Ireland",
+          "photo": "/images/club/sunderland/Dan Ballard.png"
+        },
+        {
+          "num": 20,
+          "name": "Nordi Mukiele",
+          "country": "France",
+          "photo": "/images/club/sunderland/Nordi Mukiele.png"
+        },
+        {
+          "num": 17,
+          "name": "Reinildo Mandava",
+          "country": "Mozambique",
+          "photo": "/images/club/sunderland/Reinildo Mandava.png"
+        },
+        {
+          "num": 13,
+          "name": "Luke O’Nien",
+          "country": "England",
+          "photo": "/images/club/sunderland/Luke O’Nien.png"
+        },
+        {
+          "num": 33,
+          "name": "Leo Hjelde",
+          "country": "Norway",
+          "photo": "/images/club/sunderland/Leo Hjelde.png"
+        },
+        {
+          "num": 26,
+          "name": "Arthur Masuaku",
+          "country": "DR Congo",
+          "photo": "/images/club/sunderland/Arthur Masuaku.png"
+        },
+        {
+          "num": 42,
+          "name": "Aji Alese",
+          "country": "England",
+          "photo": "/images/club/sunderland/Aji Alese.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 34,
+          "name": "Granit Xhaka",
+          "country": "Switzerland",
+          "photo": "/images/club/sunderland/Granit Xhaka.png"
+        },
+        {
+          "num": 4,
+          "name": "Dan Neil",
+          "country": "England",
+          "photo": "/images/club/sunderland/Dan Neil.png"
+        },
+        {
+          "num": 28,
+          "name": "Enzo Le Fée",
+          "country": "France",
+          "photo": "/images/club/sunderland/Enzo Le Fée.png"
+        },
+        {
+          "num": 11,
+          "name": "Chris Rigg",
+          "country": "England",
+          "photo": "/images/club/sunderland/Chris Rigg.png"
+        },
+        {
+          "num": 27,
+          "name": "Noah Sadiki",
+          "country": "DR Congo",
+          "photo": "/images/club/sunderland/Noah Sadiki.png"
+        },
+        {
+          "num": 19,
+          "name": "Habib Diarra",
+          "country": "Senegal",
+          "photo": "/images/club/sunderland/Habib Diarra.png"
+        },
+        {
+          "num": 46,
+          "name": "Abdoullah Ba",
+          "country": "France",
+          "photo": "/images/club/sunderland/Abdoullah Ba.png"
+        },
+        {
+          "num": 50,
+          "name": "Harrison Jones",
+          "country": "England",
+          "photo": "/images/club/sunderland/Harrison Jones.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 9,
+          "name": "Brian Brobbey",
+          "country": "Netherlands",
+          "photo": "/images/club/sunderland/Brian Brobbey.png"
+        },
+        {
+          "num": 24,
+          "name": "Simon Adingra",
+          "country": "Ivory Coast",
+          "photo": "/images/club/sunderland/Simon Adingra.png"
+        },
+        {
+          "num": 14,
+          "name": "Romaine Mundle",
+          "country": "England",
+          "photo": "/images/club/sunderland/Romaine Mundle.png"
+        },
+        {
+          "num": 18,
+          "name": "Wilson Isidor",
+          "country": "France",
+          "photo": "/images/club/sunderland/Wilson Isidor.png"
+        },
+        {
+          "num": 12,
+          "name": "Eliezer Mayenda",
+          "country": "Spain",
+          "photo": "/images/club/sunderland/Eliezer Mayenda.png"
+        },
+        {
+          "num": 7,
+          "name": "Chemsdine Talbi",
+          "country": "Morocco",
+          "photo": "/images/club/sunderland/Chemsdine Talbi.png"
+        },
+        {
+          "num": 29,
+          "name": "Ahmed Abdullahi",
+          "country": "Nigeria",
+          "photo": "/images/club/sunderland/Ahmed Abdullahi .png"
+        },
+        {
+          "num": 37,
+          "name": "Jocelin Ta Bi",
+          "country": "Ivory Coast",
+          "photo": "/images/club/sunderland/Jocelin Ta Bi.png"
+        },
+        {
+          "num": 25,
+          "name": "Bertrand Traoré",
+          "country": "Burkina Faso",
+          "photo": "/images/club/sunderland/Bertrand Traoré.png"
+        },
+        {
+          "num": 49,
+          "name": "Ian Poveda",
+          "country": "Colombia",
+          "photo": "/images/club/sunderland/Ian Poveda.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 0,
+          "name": "Adil Aouchiche",
+          "country": "France",
+          "photo": "/images/club/sunderland/Adil Aouchiche.png"
+        },
+        {
+          "num": 0,
+          "name": "Alan Browne",
+          "country": "Ireland",
+          "photo": "/images/club/sunderland/Alan Browne.png"
+        },
+        {
+          "num": 0,
+          "name": "Jenson Seelt",
+          "country": "Netherlands",
+          "photo": "/images/club/sunderland/Jenson Seelt.png"
+        },
+        {
+          "num": 0,
+          "name": "Niall Huggins",
+          "country": "Wales",
+          "photo": "/images/club/sunderland/Niall Huggins.png"
+        },
+        {
+          "num": 0,
+          "name": "Patrick Roberts",
+          "country": "England",
+          "photo": "/images/club/sunderland/Patrick Roberts.png"
+        },
+        {
+          "num": 0,
+          "name": "Nazariy Rusyn",
+          "country": "Ukraine",
+          "photo": "/images/club/sunderland/Nazariy Rusyn.png"
+        },
+        {
+          "num": 0,
+          "name": "Milan Aleksić",
+          "country": "Serbia",
+          "photo": "/images/club/sunderland/Milan Aleksić.png"
+        },
+        {
+          "num": 0,
+          "name": "Timothée Pembélé",
+          "country": "France",
+          "photo": "/images/club/sunderland/Timothée Pembélé.png"
+        }
+      ]
+    }
+  },
+
+  "67": {
+    "teamName": "Newcastle United",
+    "lastUpdate": "21.01.2026",
+    "coach": {
+      "name": "Eddie Howe",
+      "country": "England",
+      "photo": "/images/Trener/Newcastle United – Eddie Howe.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Nick Pope",
+          "country": "England",
+          "photo": "/images/club/newcastle/Nick_Pope.png"
+        },
+        {
+          "num": 32,
+          "name": "Aaron Ramsdale",
+          "country": "England",
+          "photo": "/images/club/newcastle/Aaron_Ramsdale.png"
+        },
+        {
+          "num": 26,
+          "name": "John Ruddy",
+          "country": "England",
+          "photo": "/images/club/newcastle/John_Ruddy.png"
+        },
+        {
+          "num": 29,
+          "name": "Mark Gillespie",
+          "country": "England",
+          "photo": "/images/club/newcastle/Mark_Gillespie.png"
+        },
+        {
+          "num": 31,
+          "name": "Max Thompson",
+          "country": "England",
+          "photo": "/images/club/newcastle/Max_Thompson.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 4,
+          "name": "Sven Botman",
+          "country": "Netherlands",
+          "photo": "/images/club/newcastle/Sven_Botman.png"
+        },
+        {
+          "num": 12,
+          "name": "Malick Thiaw",
+          "country": "Germany",
+          "photo": "/images/club/newcastle/Malick Thiaw.png"
+        },
+        {
+          "num": 5,
+          "name": "Fabian Schär",
+          "country": "Switzerland",
+          "photo": "/images/club/newcastle/Fabian_SchaÃr.png"
+        },
+        {
+          "num": 6,
+          "name": "Jamaal Lascelles",
+          "country": "England",
+          "photo": "/images/club/newcastle/Jamaal_Lascelles.png"
+        },
+        {
+          "num": 2,
+          "name": "Kieran Trippier",
+          "country": "England",
+          "photo": "/images/club/newcastle/Kieran_Tripper.png"
+        },
+        {
+          "num": 21,
+          "name": "Tino Livramento",
+          "country": "England",
+          "photo": "/images/club/newcastle/Tino_Livramento.png"
+        },
+        {
+          "num": 3,
+          "name": "Lewis Hall",
+          "country": "England",
+          "photo": "/images/club/newcastle/Lewis_Hall.png"
+        },
+        {
+          "num": 33,
+          "name": "Dan Burn",
+          "country": "England",
+          "photo": "/images/club/newcastle/Dan_Burn.png"
+        },
+        {
+          "num": 17,
+          "name": "Emil Krafth",
+          "country": "Sweden",
+          "photo": "/images/club/newcastle/Emil_Krafth.png"
+        },
+        {
+          "num": 37,
+          "name": "Alex Murphy",
+          "country": "Ireland",
+          "photo": "/images/club/newcastle/Alex_Murphy.png"
+        },
+        {
+          "num": 61,
+          "name": "Leo Shahar",
+          "country": "England",
+          "photo": "/images/club/newcastle/Leo_Shahar.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 39,
+          "name": "Bruno Guimarães",
+          "country": "Brazil",
+          "photo": "/images/club/newcastle/Bruno_GuimaraÌes.png"
+        },
+        {
+          "num": 8,
+          "name": "Sandro Tonali",
+          "country": "Italy",
+          "photo": "/images/club/newcastle/Sandro_Tonali.png"
+        },
+        {
+          "num": 7,
+          "name": "Joelinton",
+          "country": "Brazil",
+          "photo": "/images/club/newcastle/Joelinton.png"
+        },
+        {
+          "num": 41,
+          "name": "Jacob Ramsey",
+          "country": "England",
+          "photo": "/images/club/newcastle/Jacob Ramsey.png"
+        },
+        {
+          "num": 28,
+          "name": "Joe Willock",
+          "country": "England",
+          "photo": "/images/club/newcastle/Joe_Willock.png"
+        },
+        {
+          "num": 67,
+          "name": "Lewis Miley",
+          "country": "England",
+          "photo": "/images/club/newcastle/Lewis_Miley.png"
+        },
+        {
+          "num": 23,
+          "name": "Jacob Murphy",
+          "country": "England",
+          "photo": "/images/club/newcastle/Jacob_Murphy.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 10,
+          "name": "Anthony Gordon",
+          "country": "England",
+          "photo": "/images/club/newcastle/Anthony_Gordon.png"
+        },
+        {
+          "num": 9,
+          "name": "Yoane Wissa",
+          "country": "DR Congo",
+          "photo": "/images/club/newcastle/Yoane Wissa.png"
+        },
+        {
+          "num": 11,
+          "name": "Harvey Barnes",
+          "country": "England",
+          "photo": "/images/club/newcastle/Harvey_Barnes.png"
+        },
+        {
+          "num": 20,
+          "name": "Anthony Elanga",
+          "country": "Sweden",
+          "photo": "/images/club/newcastle/Anthony Elanga.png"
+        },
+        {
+          "num": 27,
+          "name": "Nick Woltemade",
+          "country": "Germany",
+          "photo": "/images/club/newcastle/Nick Woltemade.png"
+        },
+        {
+          "num": 18,
+          "name": "William Osula",
+          "country": "Denmark",
+          "photo": "/images/club/newcastle/William_Osula.png"
+        },
+        {
+          "num": 62,
+          "name": "Sean Neave",
+          "country": "England",
+          "photo": "/images/club/newcastle/Sean_Neave.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 13,
+          "name": "Matt Targett",
+          "country": "England",
+          "photo": "/images/club/newcastle/Matt_Target.png"
+        },
+        {
+          "num": 19,
+          "name": "Odysseas Vlachodimos",
+          "country": "Greece",
+          "photo": "/images/club/newcastle/Odysseas_Vlachodimos.png"
+        },
+        {
+          "num": 30,
+          "name": "Harrison Ashby",
+          "country": "Scotland",
+          "photo": "/images/club/newcastle/Harrison_Ashby.png"
+        },
+        {
+          "num": 40,
+          "name": "Joe White",
+          "country": "England",
+          "photo": "/images/club/newcastle/Joe_White.png"
+        },
+        {
+          "num": 0,
+          "name": "Antonio Cordero",
+          "country": "Spain",
+          "photo": "/images/club/newcastle/Antonio_Cordero.png"
+        }
+      ]
+    }
+  },
+
+  "63": {
+    "teamName": "Fulham",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Marco Silva",
+      "country": "Portugal",
+      "photo": "/images/Trener/Fulham – Marco Silva.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Bernd Leno",
+          "country": "Germany",
+          "photo": "/images/club/fulham/LENO_Headshot.png"
+        },
+        {
+          "num": 23,
+          "name": "Steven Benda",
+          "country": "Germany",
+          "photo": "/images/club/fulham/BENDA_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 3,
+          "name": "Calvin Bassey",
+          "country": "Nigeria",
+          "photo": "/images/club/fulham/BASSEY_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Joachim Andersen",
+          "country": "Denmark",
+          "photo": "/images/club/fulham/ANDERSEN_Headshot.png"
+        },
+        {
+          "num": 33,
+          "name": "Antonee Robinson",
+          "country": "USA",
+          "photo": "/images/club/fulham/ROBINSON_Headshot.png"
+        },
+        {
+          "num": 2,
+          "name": "Kenny Tete",
+          "country": "Netherlands",
+          "photo": "/images/club/fulham/TETE_Headshot.png"
+        },
+        {
+          "num": 15,
+          "name": "Jorge Cuenca",
+          "country": "Spain",
+          "photo": "/images/club/fulham/CUENCA_Headshot.png"
+        },
+        {
+          "num": 31,
+          "name": "Issa Diop",
+          "country": "France",
+          "photo": "/images/club/fulham/DIOP_Headshot.png"
+        },
+        {
+          "num": 21,
+          "name": "Timothy Castagne",
+          "country": "Belgium",
+          "photo": "/images/club/fulham/CASTAGNE_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 10,
+          "name": "Tom Cairney",
+          "country": "Scotland",
+          "photo": "/images/club/fulham/CAIRNEY_Headshot.png"
+        },
+        {
+          "num": 32,
+          "name": "Emile Smith Rowe",
+          "country": "England",
+          "photo": "/images/club/fulham/SMITH_ROWE_Headshot.png"
+        },
+        {
+          "num": 20,
+          "name": "Saša Lukić",
+          "country": "Serbia",
+          "photo": "/images/club/fulham/LUKIC_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "Andreas Pereira",
+          "country": "Brazil",
+          "photo": "/images/club/fulham/PEREIRA_Headshot.png"
+        },
+        {
+          "num": 16,
+          "name": "Sander Berge",
+          "country": "Norway",
+          "photo": "/images/club/fulham/BERGE_Headshot.png"
+        },
+        {
+          "num": 6,
+          "name": "Harrison Reed",
+          "country": "England",
+          "photo": "/images/club/fulham/REED_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 7,
+          "name": "Raúl Jiménez",
+          "country": "Mexico",
+          "photo": "/images/club/fulham/JIMENEZ_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Rodrigo Muniz",
+          "country": "Brazil",
+          "photo": "/images/club/fulham/MUNIZ_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Adama Traoré",
+          "country": "Spain",
+          "photo": "/images/club/fulham/TRAORE_Headshot.png"
+        },
+        {
+          "num": 12,
+          "name": "Alex Iwobi",
+          "country": "Nigeria",
+          "photo": "/images/club/fulham/IWOBI_Headshot.png"
+        },
+        {
+          "num": 8,
+          "name": "Harry Wilson",
+          "country": "Wales",
+          "photo": "/images/club/fulham/WILSON_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Reiss Nelson",
+          "country": "England",
+          "photo": "/images/club/fulham/NELSON_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 30,
+          "name": "Carlos Vinícius",
+          "country": "Brazil",
+          "photo": "/images/club/fulham/VINICIUS_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "397": {
+    "teamName": "Brighton & Hove Albion",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Fabian Hürzeler",
+      "country": "Germany",
+      "photo": "/images/Trener/Brighton & Hove Albion – Fabian Hürzeler.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Bart Verbruggen",
+          "country": "Netherlands",
+          "photo": "/images/club/brighton/VERBRUGGEN_Headshot.png"
+        },
+        {
+          "num": 23,
+          "name": "Jason Steele",
+          "country": "England",
+          "photo": "/images/club/brighton/STEELE_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 5,
+          "name": "Lewis Dunk",
+          "country": "England",
+          "photo": "/images/club/brighton/DUNK_Headshot.png"
+        },
+        {
+          "num": 29,
+          "name": "Jan Paul van Hecke",
+          "country": "Netherlands",
+          "photo": "/images/club/brighton/HECKE_Headshot.png"
+        },
+        {
+          "num": 3,
+          "name": "Igor Julio",
+          "country": "Brazil",
+          "photo": "/images/club/brighton/IGOR_Headshot.png"
+        },
+        {
+          "num": 34,
+          "name": "Joël Veltman",
+          "country": "Netherlands",
+          "photo": "/images/club/brighton/VELTMAN_Headshot.png"
+        },
+        {
+          "num": 24,
+          "name": "Ferdi Kadıoğlu",
+          "country": "Turkey",
+          "photo": "/images/club/brighton/KADIOGLU_Headshot.png"
+        },
+        {
+          "num": 43,
+          "name": "Pervis Estupiñán",
+          "country": "Ecuador",
+          "photo": "/images/club/brighton/ESTUPINAN_Headshot.png"
+        },
+        {
+          "num": 2,
+          "name": "Tariq Lamptey",
+          "country": "Ghana",
+          "photo": "/images/club/brighton/LAMPTEY_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 41,
+          "name": "Jack Hinshelwood",
+          "country": "England",
+          "photo": "/images/club/brighton/HINSHELWOOD_Headshot.png"
+        },
+        {
+          "num": 20,
+          "name": "Carlos Baleba",
+          "country": "Cameroon",
+          "photo": "/images/club/brighton/BALEBA_Headshot.png"
+        },
+        {
+          "num": 26,
+          "name": "Yasin Ayari",
+          "country": "Sweden",
+          "photo": "/images/club/brighton/AYARI_Headshot.png"
+        },
+        {
+          "num": 10,
+          "name": "Julio Enciso",
+          "country": "Paraguay",
+          "photo": "/images/club/brighton/ENCISO_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Simon Adingra",
+          "country": "Ivory Coast",
+          "photo": "/images/club/brighton/ADINGRA_Headshot.png"
+        },
+        {
+          "num": 6,
+          "name": "James Milner",
+          "country": "England",
+          "photo": "/images/club/brighton/MILNER_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 22,
+          "name": "Kaoru Mitoma",
+          "country": "Japan",
+          "photo": "/images/club/brighton/MITOMA_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "João Pedro",
+          "country": "Brazil",
+          "photo": "/images/club/brighton/PEDRO_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "Danny Welbeck",
+          "country": "England",
+          "photo": "/images/club/brighton/WELBECK_Headshot.png"
+        },
+        {
+          "num": 14,
+          "name": "Georginio Rutter",
+          "country": "France",
+          "photo": "/images/club/brighton/RUTTER_Headshot.png"
+        },
+        {
+          "num": 17,
+          "name": "Yankuba Minteh",
+          "country": "Gambia",
+          "photo": "/images/club/brighton/MINTEH_Headshot.png"
+        },
+        {
+          "num": 28,
+          "name": "Evan Ferguson",
+          "country": "Ireland",
+          "photo": "/images/club/brighton/FERGUSON_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 8,
+          "name": "Brajan Gruda",
+          "country": "Germany",
+          "photo": "/images/club/brighton/GRUDA_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "62": {
+    "teamName": "Everton",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "David Moyes",
+      "country": "Scotland",
+      "photo": "/images/Trener/Everton – David Moyes.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Jordan Pickford",
+          "country": "England",
+          "photo": "/images/club/everton/PICKFORD_Headshot.png"
+        },
+        {
+          "num": 12,
+          "name": "João Virgínia",
+          "country": "Portugal",
+          "photo": "/images/club/everton/VIRGINIA_Headshot.png"
+        },
+        {
+          "num": 31,
+          "name": "Asmir Begović",
+          "country": "Bosnia",
+          "photo": "/images/club/everton/BEGOVIC_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 6,
+          "name": "James Tarkowski",
+          "country": "England",
+          "photo": "/images/club/everton/TARKOWSKI_Headshot.png"
+        },
+        {
+          "num": 32,
+          "name": "Jarrad Branthwaite",
+          "country": "England",
+          "photo": "/images/club/everton/BRANTHWAITE_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Vitaliy Mykolenko",
+          "country": "Ukraine",
+          "photo": "/images/club/everton/MYKOLENKO_Headshot.png"
+        },
+        {
+          "num": 15,
+          "name": "Jake O'Brien",
+          "country": "Ireland",
+          "photo": "/images/club/everton/OBRIEN_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "Ashley Young",
+          "country": "England",
+          "photo": "/images/club/everton/YOUNG_Headshot.png"
+        },
+        {
+          "num": 2,
+          "name": "Nathan Patterson",
+          "country": "Scotland",
+          "photo": "/images/club/everton/PATTERSON_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Michael Keane",
+          "country": "England",
+          "photo": "/images/club/everton/KEANE_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 16,
+          "name": "Abdoulaye Doucouré",
+          "country": "Mali",
+          "photo": "/images/club/everton/DOUCOURE_Headshot.png"
+        },
+        {
+          "num": 27,
+          "name": "Idrissa Gueye",
+          "country": "Senegal",
+          "photo": "/images/club/everton/GUEYE_Headshot.png"
+        },
+        {
+          "num": 37,
+          "name": "James Garner",
+          "country": "England",
+          "photo": "/images/club/everton/GARNER_Headshot.png"
+        },
+        {
+          "num": 22,
+          "name": "Jack Harrison",
+          "country": "England",
+          "photo": "/images/club/everton/HARRISON_Headshot.png"
+        },
+        {
+          "num": 29,
+          "name": "Orel Mangala",
+          "country": "Belgium",
+          "photo": "/images/club/everton/MANGALA_Headshot.png"
+        },
+        {
+          "num": 10,
+          "name": "Iliman Ndiaye",
+          "country": "Senegal",
+          "photo": "/images/club/everton/NDIAYE_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 9,
+          "name": "Dominic Calvert-Lewin",
+          "country": "England",
+          "photo": "/images/club/everton/CALVERT-LEWIN_Headshot.png"
+        },
+        {
+          "num": 7,
+          "name": "Dwight McNeil",
+          "country": "England",
+          "photo": "/images/club/everton/MCNEIL_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Beto",
+          "country": "Portugal",
+          "photo": "/images/club/everton/BETO_Headshot.png"
+        },
+        {
+          "num": 21,
+          "name": "Armando Broja",
+          "country": "Albania",
+          "photo": "/images/club/everton/BROJA_Headshot.png"
+        },
+        {
+          "num": 20,
+          "name": "Youssef Chermiti",
+          "country": "Portugal",
+          "photo": "/images/club/everton/CHERMITI_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 14,
+          "name": "Tim Iroegbunam",
+          "country": "England",
+          "photo": "/images/club/everton/IROEGBUNAM_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "354": {
+    "teamName": "Crystal Palace",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Oliver Glasner",
+      "country": "Austria",
+      "photo": "/images/Trener/Crystal Palace – Oliver Glasner.jpg"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Dean Henderson",
+          "country": "England",
+          "photo": "/images/club/palace/HENDERSON_Headshot.png"
+        },
+        {
+          "num": 12,
+          "name": "Matt Turner",
+          "country": "USA",
+          "photo": "/images/club/palace/TURNER_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 6,
+          "name": "Marc Guéhi",
+          "country": "England",
+          "photo": "/images/club/palace/GUEHI_Headshot.png"
+        },
+        {
+          "num": 27,
+          "name": "Maxence Lacroix",
+          "country": "France",
+          "photo": "/images/club/palace/LACROIX_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Maxence Lacroix",
+          "country": "France",
+          "photo": "/images/club/palace/LACROIX_Headshot.png"
+        },
+        {
+          "num": 3,
+          "name": "Tyrick Mitchell",
+          "country": "England",
+          "photo": "/images/club/palace/MITCHELL_Headshot.png"
+        },
+        {
+          "num": 12,
+          "name": "Daniel Muñoz",
+          "country": "Colombia",
+          "photo": "/images/club/palace/MUNOZ_Headshot.png"
+        },
+        {
+          "num": 34,
+          "name": "Chadi Riad",
+          "country": "Morocco",
+          "photo": "/images/club/palace/RIAD_Headshot.png"
+        },
+        {
+          "num": 17,
+          "name": "Chris Richards",
+          "country": "USA",
+          "photo": "/images/club/palace/RICHARDS_Headshot.png"
+        },
+        {
+          "num": 26,
+          "name": "Trevor Chalobah",
+          "country": "England",
+          "photo": "/images/club/palace/CHALOBAH_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 10,
+          "name": "Eberechi Eze",
+          "country": "England",
+          "photo": "/images/club/palace/EZE_Headshot.png"
+        },
+        {
+          "num": 20,
+          "name": "Adam Wharton",
+          "country": "England",
+          "photo": "/images/club/palace/WHARTON_Headshot.png"
+        },
+        {
+          "num": 8,
+          "name": "Jefferson Lerma",
+          "country": "Colombia",
+          "photo": "/images/club/palace/LERMA_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Matheus França",
+          "country": "Brazil",
+          "photo": "/images/club/palace/FRANCA_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "Daichi Kamada",
+          "country": "Japan",
+          "photo": "/images/club/palace/KAMADA_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Will Hughes",
+          "country": "England",
+          "photo": "/images/club/palace/HUGHES_Headshot.png"
+        },
+        {
+          "num": 28,
+          "name": "Cheick Doucouré",
+          "country": "Mali",
+          "photo": "/images/club/palace/DOUCOURE_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 14,
+          "name": "Jean-Philippe Mateta",
+          "country": "France",
+          "photo": "/images/club/palace/MATETA_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Eddie Nketiah",
+          "country": "England",
+          "photo": "/images/club/palace/NKETIAH_Headshot.png"
+        },
+        {
+          "num": 7,
+          "name": "Ismaïla Sarr",
+          "country": "Senegal",
+          "photo": "/images/club/palace/SARR_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 15,
+          "name": "Jeffrey Schlupp",
+          "country": "Ghana",
+          "photo": "/images/club/palace/SCHLUPP_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "73": {
+    "teamName": "spurs",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Thomas Frank",
+      "country": "Denmark",
+      "photo": "/images/Trener/Tottenham – Thomas Frank.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Guglielmo Vicario",
+          "country": "Italy",
+          "photo": "/images/club/spurs/VICARIO_Headshot.png"
+        },
+        {
+          "num": 31,
+          "name": "Antonín Kinský",
+          "country": "Czech Republic",
+          "photo": "/images/club/spurs/KINSKY_Headshot.png"
+        },
+        {
+          "num": 40,
+          "name": "Brandon Austin",
+          "country": "England",
+          "photo": "/images/club/spurs/AUSTIN_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 17,
+          "name": "Cristian Romero",
+          "country": "Argentina",
+          "photo": "/images/club/spurs/ROMERO_Headshot.png"
+        },
+        {
+          "num": 37,
+          "name": "Micky van de Ven",
+          "country": "Netherlands",
+          "photo": "/images/club/spurs/VAN_DE_VEN_Headshot.png"
+        },
+        {
+          "num": 3,
+          "name": "Radu Drăgușin",
+          "country": "Romania",
+          "photo": "/images/club/spurs/DRAGUSIN_Headshot.png"
+        },
+        {
+          "num": 4,
+          "name": "Kevin Danso",
+          "country": "Austria",
+          "photo": "/images/club/spurs/DANSO_Headshot.png"
+        },
+        {
+          "num": 23,
+          "name": "Pedro Porro",
+          "country": "Spain",
+          "photo": "/images/club/spurs/PORRO_Headshot.png"
+        },
+        {
+          "num": 13,
+          "name": "Destiny Udogie",
+          "country": "Italy",
+          "photo": "/images/club/spurs/UDOGIE_Headshot.png"
+        },
+        {
+          "num": 24,
+          "name": "Djed Spence",
+          "country": "England",
+          "photo": "/images/club/spurs/SPENCE_Headshot.png"
+        },
+        {
+          "num": 33,
+          "name": "Ben Davies",
+          "country": "Wales",
+          "photo": "/images/club/spurs/DAVIES_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 10,
+          "name": "James Maddison",
+          "country": "England",
+          "photo": "/images/club/spurs/MADDISON_Headshot.png"
+        },
+        {
+          "num": 20,
+          "name": "Mohammed Kudus",
+          "country": "Ghana",
+          "photo": "/images/club/spurs/KUDUS_Headshot.png"
+        },
+        {
+          "num": 7,
+          "name": "Xavi Simons",
+          "country": "Netherlands",
+          "photo": "/images/club/spurs/SIMONS_Headshot.png"
+        },
+        {
+          "num": 22,
+          "name": "Conor Gallagher",
+          "country": "England",
+          "photo": "/images/club/spurs/GALLAGHER_Headshot.png"
+        },
+        {
+          "num": 8,
+          "name": "Yves Bissouma",
+          "country": "Mali",
+          "photo": "/images/club/spurs/BISSOUMA_Headshot.png"
+        },
+        {
+          "num": 29,
+          "name": "Pape Matar Sarr",
+          "country": "Senegal",
+          "photo": "/images/club/spurs/SARR_Headshot.png"
+        },
+        {
+          "num": 30,
+          "name": "Rodrigo Bentancur",
+          "country": "Uruguay",
+          "photo": "/images/club/spurs/BENTANCUR_Headshot.png"
+        },
+        {
+          "num": 14,
+          "name": "Archie Gray",
+          "country": "England",
+          "photo": "/images/club/spurs/GRAY_Headshot.png"
+        },
+        {
+          "num": 15,
+          "name": "Lucas Bergvall",
+          "country": "Sweden",
+          "photo": "/images/club/spurs/BERGVALL_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 19,
+          "name": "Dominic Solanke",
+          "country": "England",
+          "photo": "/images/club/spurs/SOLANKE_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Richarlison",
+          "country": "Brazil",
+          "photo": "/images/club/spurs/RICHARLISON_Headshot.png"
+        },
+        {
+          "num": 21,
+          "name": "Dejan Kulusevski",
+          "country": "Sweden",
+          "photo": "/images/club/spurs/KULUSEVSKI_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Mathys Tel",
+          "country": "France",
+          "photo": "/images/club/spurs/TEL_Headshot.png"
+        },
+        {
+          "num": 28,
+          "name": "Wilson Odobert",
+          "country": "France",
+          "photo": "/images/club/spurs/ODOBERT_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 16,
+          "name": "Luka Vušković",
+          "country": "Croatia",
+          "photo": "/images/club/spurs/VUSKOVIC_Headshot.png"
+        },
+        {
+          "num": 25,
+          "name": "Kota Takai",
+          "country": "Japan",
+          "photo": "/images/club/spurs/TAKAI_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "76": {
+    "teamName": "wolves",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Rob Edwards",
+      "country": "Wales",
+      "photo": "/images/Trener/Wolverhampton Wanderers – Rob Edwards.jpg"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "José Sá",
+          "country": "Portugal",
+          "photo": "/images/club/wolves/SA_Headshot.png"
+        },
+        {
+          "num": 25,
+          "name": "Dan Bentley",
+          "country": "England",
+          "photo": "/images/club/wolves/BENTLEY_Headshot.png"
+        },
+        {
+          "num": 31,
+          "name": "Sam Johnstone",
+          "country": "England",
+          "photo": "/images/club/wolves/JOHNSTONE_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 24,
+          "name": "Toti Gomes",
+          "country": "Portugal",
+          "photo": "/images/club/wolves/TOTI_Headshot.png"
+        },
+        {
+          "num": 15,
+          "name": "Craig Dawson",
+          "country": "England",
+          "photo": "/images/club/wolves/DAWSON_Headshot.png"
+        },
+        {
+          "num": 4,
+          "name": "Santiago Bueno",
+          "country": "Uruguay",
+          "photo": "/images/club/wolves/BUENO_Headshot.png"
+        },
+        {
+          "num": 3,
+          "name": "Rayan Aït-Nouri",
+          "country": "Algeria",
+          "photo": "/images/club/wolves/AIT-NOURI_Headshot.png"
+        },
+        {
+          "num": 2,
+          "name": "Matt Doherty",
+          "country": "Ireland",
+          "photo": "/images/club/wolves/DOHERTY_Headshot.png"
+        },
+        {
+          "num": 22,
+          "name": "Nélson Semedo",
+          "country": "Portugal",
+          "photo": "/images/club/wolves/SEMEDO_Headshot.png"
+        },
+        {
+          "num": 37,
+          "name": "Rodrigo Gomes",
+          "country": "Portugal",
+          "photo": "/images/club/wolves/GOMES_R_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 8,
+          "name": "João Gomes",
+          "country": "Brazil",
+          "photo": "/images/club/wolves/GOMES_J_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Mario Lemina",
+          "country": "Gabon",
+          "photo": "/images/club/wolves/LEMINA_Headshot.png"
+        },
+        {
+          "num": 20,
+          "name": "Tommy Doyle",
+          "country": "England",
+          "photo": "/images/club/wolves/DOYLE_Headshot.png"
+        },
+        {
+          "num": 6,
+          "name": "Boubacar Traoré",
+          "country": "Mali",
+          "photo": "/images/club/wolves/TRAORE_Headshot.png"
+        },
+        {
+          "num": 27,
+          "name": "Jean-Ricner Bellegarde",
+          "country": "France",
+          "photo": "/images/club/wolves/BELLEGARDE_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 10,
+          "name": "Matheus Cunha",
+          "country": "Brazil",
+          "photo": "/images/club/wolves/CUNHA_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Hwang Hee-chan",
+          "country": "South Korea",
+          "photo": "/images/club/wolves/HWANG_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Jørgen Strand Larsen",
+          "country": "Norway",
+          "photo": "/images/club/wolves/LARSEN_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Gonçalo Guedes",
+          "country": "Portugal",
+          "photo": "/images/club/wolves/GUEDES_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "Carlos Forbs",
+          "country": "Portugal",
+          "photo": "/images/club/wolves/FORBS_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 14,
+          "name": "Enso González",
+          "country": "Paraguay",
+          "photo": "/images/club/wolves/GONZALEZ_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "1044": {
+    "teamName": "Bournemouth",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Andoni Iraola",
+      "country": "Spain",
+      "photo": "/images/Trener/Bournemouth – Andoni Iraola.jpg"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 13,
+          "name": "Kepa Arrizabalaga",
+          "country": "Spain",
+          "photo": "/images/club/bournemouth/KEPA_Headshot.png"
+        },
+        {
+          "num": 40,
+          "name": "Will Dennis",
+          "country": "England",
+          "photo": "/images/club/bournemouth/DENNIS_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 27,
+          "name": "Ilya Zabarnyi",
+          "country": "Ukraine",
+          "photo": "/images/club/bournemouth/ZABARNYI_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Marcos Senesi",
+          "country": "Argentina",
+          "photo": "/images/club/bournemouth/SENESI_Headshot.png"
+        },
+        {
+          "num": 3,
+          "name": "Milos Kerkez",
+          "country": "Hungary",
+          "photo": "/images/club/bournemouth/KERKEZ_Headshot.png"
+        },
+        {
+          "num": 15,
+          "name": "Adam Smith",
+          "country": "England",
+          "photo": "/images/club/bournemouth/SMITH_Headshot.png"
+        },
+        {
+          "num": 2,
+          "name": "Dean Huijsen",
+          "country": "Spain",
+          "photo": "/images/club/bournemouth/HUIJSEN_Headshot.png"
+        },
+        {
+          "num": 22,
+          "name": "Julián Araujo",
+          "country": "Mexico",
+          "photo": "/images/club/bournemouth/ARAUJO_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 4,
+          "name": "Lewis Cook",
+          "country": "England",
+          "photo": "/images/club/bournemouth/COOK_Headshot.png"
+        },
+        {
+          "num": 8,
+          "name": "Alex Scott",
+          "country": "England",
+          "photo": "/images/club/bournemouth/SCOTT_Headshot.png"
+        },
+        {
+          "num": 16,
+          "name": "Marcus Tavernier",
+          "country": "England",
+          "photo": "/images/club/bournemouth/TAVERNIER_Headshot.png"
+        },
+        {
+          "num": 10,
+          "name": "Justin Kluivert",
+          "country": "Netherlands",
+          "photo": "/images/club/bournemouth/KLUIVERT_Headshot.png"
+        },
+        {
+          "num": 12,
+          "name": "Tyler Adams",
+          "country": "USA",
+          "photo": "/images/club/bournemouth/ADAMS_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Dango Ouattara",
+          "country": "Burkina Faso",
+          "photo": "/images/club/bournemouth/OUATTARA_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 9,
+          "name": "Evanilson",
+          "country": "Brazil",
+          "photo": "/images/club/bournemouth/EVANILSON_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Luis Sinisterra",
+          "country": "Colombia",
+          "photo": "/images/club/bournemouth/SINISTERRA_Headshot.png"
+        },
+        {
+          "num": 17,
+          "name": "Antoine Semenyo",
+          "country": "Ghana",
+          "photo": "/images/club/bournemouth/SEMENYO_Headshot.png"
+        },
+        {
+          "num": 26,
+          "name": "Enes Ünal",
+          "country": "Turkey",
+          "photo": "/images/club/bournemouth/UNAL_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 23,
+          "name": "James Hill",
+          "country": "England",
+          "photo": "/images/club/bournemouth/HILL_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "341": {
+    "teamName": "Leeds United",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Daniel Farke",
+      "country": "Germany",
+      "photo": "/images/Trener/Leeds United – Daniel Farke.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "Illan Meslier",
+          "country": "France",
+          "photo": "/images/club/leeds/MESLIER_Headshot.png"
+        },
+        {
+          "num": 21,
+          "name": "Karl Darlow",
+          "country": "England",
+          "photo": "/images/club/leeds/DARLOW_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 21,
+          "name": "Pascal Struijk",
+          "country": "Netherlands",
+          "photo": "/images/club/leeds/STRUIJK_Headshot.png"
+        },
+        {
+          "num": 6,
+          "name": "Joe Rodon",
+          "country": "Wales",
+          "photo": "/images/club/leeds/RODON_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Maximilian Wöber",
+          "country": "Austria",
+          "photo": "/images/club/leeds/WOBER_Headshot.png"
+        },
+        {
+          "num": 3,
+          "name": "Junior Firpo",
+          "country": "Dominican Republic",
+          "photo": "/images/club/leeds/FIRPO_Headshot.png"
+        },
+        {
+          "num": 2,
+          "name": "Jayden Bogle",
+          "country": "England",
+          "photo": "/images/club/leeds/BOGLE_Headshot.png"
+        },
+        {
+          "num": 33,
+          "name": "Isaac Schmidt",
+          "country": "Switzerland",
+          "photo": "/images/club/leeds/SCHMIDT_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 4,
+          "name": "Ethan Ampadu",
+          "country": "Wales",
+          "photo": "/images/club/leeds/AMPADU_Headshot.png"
+        },
+        {
+          "num": 8,
+          "name": "Ilia Gruev",
+          "country": "Bulgaria",
+          "photo": "/images/club/leeds/GRUEV_Headshot.png"
+        },
+        {
+          "num": 44,
+          "name": "Ao Tanaka",
+          "country": "Japan",
+          "photo": "/images/club/leeds/TANAKA_Headshot.png"
+        },
+        {
+          "num": 10,
+          "name": "Joel Piroe",
+          "country": "Netherlands",
+          "photo": "/images/club/leeds/PIROE_Headshot.png"
+        },
+        {
+          "num": 22,
+          "name": "Brenden Aaronson",
+          "country": "USA",
+          "photo": "/images/club/leeds/AARONSON_Headshot.png"
+        },
+        {
+          "num": 7,
+          "name": "Daniel James",
+          "country": "Wales",
+          "photo": "/images/club/leeds/JAMES_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 19,
+          "name": "Mateo Joseph",
+          "country": "Spain",
+          "photo": "/images/club/leeds/JOSEPH_Headshot.png"
+        },
+        {
+          "num": 14,
+          "name": "Manor Solomon",
+          "country": "Israel",
+          "photo": "/images/club/leeds/SOLOMON_Headshot.png"
+        },
+        {
+          "num": 17,
+          "name": "Largie Ramazani",
+          "country": "Belgium",
+          "photo": "/images/club/leeds/RAMAZANI_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Patrick Bamford",
+          "country": "England",
+          "photo": "/images/club/leeds/BAMFORD_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Wilfried Gnonto",
+          "country": "Italy",
+          "photo": "/images/club/leeds/GNONTO_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 25,
+          "name": "Rasmus Kristensen",
+          "country": "Denmark",
+          "photo": "/images/club/leeds/KRISTENSEN_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "351": {
+    "teamName": "Nottingham Forest",
+    "lastUpdate": "27.01.2026",
+    "coach": {
+      "name": "Sean Dyche",
+      "country": "England",
+      "photo": "/images/Trener/Nottingham Forest – Sean Dyche.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 33,
+          "name": "Carlos Miguel",
+          "country": "Brazil",
+          "photo": "/images/club/nottingham/MIGUEL_Headshot.png"
+        },
+        {
+          "num": 26,
+          "name": "Matz Sels",
+          "country": "Belgium",
+          "photo": "/images/club/nottingham/SELS_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 4,
+          "name": "Murillo",
+          "country": "Brazil",
+          "photo": "/images/club/nottingham/MURILLO_Headshot.png"
+        },
+        {
+          "num": 31,
+          "name": "Nikola Milenković",
+          "country": "Serbia",
+          "photo": "/images/club/nottingham/MILENKOVIC_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Morato",
+          "country": "Brazil",
+          "photo": "/images/club/nottingham/MORATO_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Álex Moreno",
+          "country": "Spain",
+          "photo": "/images/club/nottingham/MORENO_Headshot.png"
+        },
+        {
+          "num": 7,
+          "name": "Neco Williams",
+          "country": "Wales",
+          "photo": "/images/club/nottingham/WILLIAMS_Headshot.png"
+        },
+        {
+          "num": 2,
+          "name": "Ola Aina",
+          "country": "Nigeria",
+          "photo": "/images/club/nottingham/AINA_Headshot.png"
+        },
+        {
+          "num": 15,
+          "name": "Andrew Omobamidele",
+          "country": "Ireland",
+          "photo": "/images/club/nottingham/OMOBAMIDELE_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 10,
+          "name": "Morgan Gibbs-White",
+          "country": "England",
+          "photo": "/images/club/nottingham/GIBBS-WHITE_Headshot.png"
+        },
+        {
+          "num": 28,
+          "name": "Danilo",
+          "country": "Brazil",
+          "photo": "/images/club/nottingham/DANILO_Headshot.png"
+        },
+        {
+          "num": 16,
+          "name": "Nicolás Domínguez",
+          "country": "Argentina",
+          "photo": "/images/club/nottingham/DOMINGUEZ_Headshot.png"
+        },
+        {
+          "num": 22,
+          "name": "Ryan Yates",
+          "country": "England",
+          "photo": "/images/club/nottingham/YATES_Headshot.png"
+        },
+        {
+          "num": 8,
+          "name": "Elliot Anderson",
+          "country": "Scotland",
+          "photo": "/images/club/nottingham/ANDERSON_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "James Ward-Prowse",
+          "country": "England",
+          "photo": "/images/club/nottingham/WARD-PROWSE_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 11,
+          "name": "Chris Wood",
+          "country": "New Zealand",
+          "photo": "/images/club/nottingham/WOOD_Headshot.png"
+        },
+        {
+          "num": 14,
+          "name": "Callum Hudson-Odoi",
+          "country": "England",
+          "photo": "/images/club/nottingham/HUDSON-ODOI_Headshot.png"
+        },
+        {
+          "num": 21,
+          "name": "Anthony Elanga",
+          "country": "Sweden",
+          "photo": "/images/club/nottingham/ELANGA_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Taiwo Awoniyi",
+          "country": "Nigeria",
+          "photo": "/images/club/nottingham/AWONIYI_Headshot.png"
+        },
+        {
+          "num": 24,
+          "name": "Ramon Sosa",
+          "country": "Paraguay",
+          "photo": "/images/club/nottingham/SOSA_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 12,
+          "name": "Nathan Collins",
+          "country": "Ireland",
+          "photo": "/images/club/nottingham/COLLINS_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "563": {
+    "teamName": "westham",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Nuno Espírito Santo",
+      "country": "Portugal",
+      "photo": "/images/Trener/West Ham United – Nuno Espírito Santo.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 23,
+          "name": "Alphonse Areola",
+          "country": "France",
+          "photo": "/images/club/westham/AREOLA_Headshot.png"
+        },
+        {
+          "num": 1,
+          "name": "Łukasz Fabiański",
+          "country": "Poland",
+          "photo": "/images/club/westham/FABIANSKI_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 26,
+          "name": "Max Kilman",
+          "country": "England",
+          "photo": "/images/club/westham/KILMAN_Headshot.png"
+        },
+        {
+          "num": 25,
+          "name": "Jean-Clair Todibo",
+          "country": "France",
+          "photo": "/images/club/westham/TODIBO_Headshot.png"
+        },
+        {
+          "num": 15,
+          "name": "Konstantinos Mavropanos",
+          "country": "Greece",
+          "photo": "/images/club/westham/MAVROPANOS_Headshot.png"
+        },
+        {
+          "num": 33,
+          "name": "Emerson Palmieri",
+          "country": "Italy",
+          "photo": "/images/club/westham/EMERSON_Headshot.png"
+        },
+        {
+          "num": 29,
+          "name": "Aaron Wan-Bissaka",
+          "country": "England",
+          "photo": "/images/club/westham/WAN-BISSAKA_Headshot.png"
+        },
+        {
+          "num": 5,
+          "name": "Vladimír Coufal",
+          "country": "Czech Republic",
+          "photo": "/images/club/westham/COUFAL_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 10,
+          "name": "Lucas Paquetá",
+          "country": "Brazil",
+          "photo": "/images/club/westham/PAQUETA_Headshot.png"
+        },
+        {
+          "num": 14,
+          "name": "Mohammed Kudus",
+          "country": "Ghana",
+          "photo": "/images/club/westham/KUDUS_Headshot.png"
+        },
+        {
+          "num": 19,
+          "name": "Edson Álvarez",
+          "country": "Mexico",
+          "photo": "/images/club/westham/ALVAREZ_Headshot.png"
+        },
+        {
+          "num": 28,
+          "name": "Tomáš Souček",
+          "country": "Czech Republic",
+          "photo": "/images/club/westham/SOUCEK_Headshot.png"
+        },
+        {
+          "num": 24,
+          "name": "Guido Rodríguez",
+          "country": "Argentina",
+          "photo": "/images/club/westham/RODRIGUEZ_Headshot.png"
+        },
+        {
+          "num": 39,
+          "name": "Carlos Soler",
+          "country": "Spain",
+          "photo": "/images/club/westham/SOLER_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 20,
+          "name": "Jarrod Bowen",
+          "country": "England",
+          "photo": "/images/club/westham/BOWEN_Headshot.png"
+        },
+        {
+          "num": 7,
+          "name": "Crysencio Summerville",
+          "country": "Netherlands",
+          "photo": "/images/club/westham/SUMMERVILLE_Headshot.png"
+        },
+        {
+          "num": 9,
+          "name": "Michail Antonio",
+          "country": "Jamaica",
+          "photo": "/images/club/westham/ANTONIO_Headshot.png"
+        },
+        {
+          "num": 11,
+          "name": "Niclas Füllkrug",
+          "country": "Germany",
+          "photo": "/images/club/westham/FULLKRUG_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "Danny Ings",
+          "country": "England",
+          "photo": "/images/club/westham/INGS_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 4,
+          "name": "Kurt Zouma",
+          "country": "France",
+          "photo": "/images/club/westham/ZOUMA_Headshot.png"
+        }
+      ]
+    }
+  },
+
+  "328": {
+    "teamName": "Burnley",
+    "lastUpdate": "19.01.2026",
+    "coach": {
+      "name": "Scott Parker",
+      "country": "England",
+      "photo": "/images/Trener/Burnley – Scott Parker.png"
+    },
+    "categories": {
+      "Вратари": [
+        {
+          "num": 1,
+          "name": "James Trafford",
+          "country": "England",
+          "photo": "/images/club/burnley/TRAFFORD_Headshot.png"
+        },
+        {
+          "num": 32,
+          "name": "Vaclav Hladky",
+          "country": "Czech Republic",
+          "photo": "/images/club/burnley/HLADKY_Headshot.png"
+        }
+      ],
+      "Защитники": [
+        {
+          "num": 5,
+          "name": "Maxime Estève",
+          "country": "France",
+          "photo": "/images/club/burnley/ESTEVE_Headshot.png"
+        },
+        {
+          "num": 4,
+          "name": "Joe Worrall",
+          "country": "England",
+          "photo": "/images/club/burnley/WORRALL_Headshot.png"
+        },
+        {
+          "num": 23,
+          "name": "Lucas Pires",
+          "country": "Brazil",
+          "photo": "/images/club/burnley/PIRES_Headshot.png"
+        },
+        {
+          "num": 14,
+          "name": "Connor Roberts",
+          "country": "Wales",
+          "photo": "/images/club/burnley/ROBERTS_Headshot.png"
+        },
+        {
+          "num": 6,
+          "name": "CJ Egan-Riley",
+          "country": "England",
+          "photo": "/images/club/burnley/EGAN-RILEY_Headshot.png"
+        },
+        {
+          "num": 18,
+          "name": "Hjalmar Ekdal",
+          "country": "Sweden",
+          "photo": "/images/club/burnley/EKDAL_Headshot.png"
+        }
+      ],
+      "Полузащитники": [
+        {
+          "num": 8,
+          "name": "Josh Brownhill",
+          "country": "England",
+          "photo": "/images/club/burnley/BROWNHILL_Headshot.png"
+        },
+        {
+          "num": 24,
+          "name": "Josh Cullen",
+          "country": "Ireland",
+          "photo": "/images/club/burnley/CULLEN_Headshot.png"
+        },
+        {
+          "num": 42,
+          "name": "Han-Noah Massengo",
+          "country": "France",
+          "photo": "/images/club/burnley/MASSENGO_Headshot.png"
+        },
+        {
+          "num": 10,
+          "name": "Manuel Benson",
+          "country": "Angola",
+          "photo": "/images/club/burnley/BENSON_Headshot.png"
+        },
+        {
+          "num": 30,
+          "name": "Luca Koleosho",
+          "country": "Italy",
+          "photo": "/images/club/burnley/KOLEOSHO_Headshot.png"
+        },
+        {
+          "num": 29,
+          "name": "Jaidon Anthony",
+          "country": "England",
+          "photo": "/images/club/burnley/ANTHONY_Headshot.png"
+        }
+      ],
+      "Нападающие": [
+        {
+          "num": 9,
+          "name": "Jay Rodriguez",
+          "country": "England",
+          "photo": "/images/club/burnley/RODRIGUEZ_Headshot.png"
+        },
+        {
+          "num": 17,
+          "name": "Lyle Foster",
+          "country": "South Africa",
+          "photo": "/images/club/burnley/FOSTER_Headshot.png"
+        },
+        {
+          "num": 37,
+          "name": "Andreas Hountondji",
+          "country": "Benin",
+          "photo": "/images/club/burnley/HOUNTONDJI_Headshot.png"
+        }
+      ],
+      "В аренде": [
+        {
+          "num": 11,
+          "name": "Mike Trésor",
+          "country": "Belgium",
+          "photo": "/images/club/burnley/TRESOR_Headshot.png"
+        }
+      ]
+    }
+  }
+}
